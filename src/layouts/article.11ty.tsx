@@ -55,7 +55,7 @@ function Page(
     collections: { articles },
   }: IProps
 ) {
-  const inlineCss = this.getAssetContents(cssPath);
+  const inlineCss = this.getAssetContents([cssPath]);
 
   return (
     <Html

@@ -2,13 +2,13 @@
 
 /* -----------------------------------
  *
- * Content
+ * Wrapper
  *
  * -------------------------------- */
 
-.content {
-  position: relative;
-  z-index: 2;
-  padding: rem(30) 0 0;
-  flex: 1 1 auto;
+.wrapper {
+  display: flex;
+  height: 0;
+  min-height: 100%;
+  flex-direction: column;
 }

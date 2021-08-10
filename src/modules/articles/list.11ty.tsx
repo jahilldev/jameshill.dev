@@ -66,5 +66,6 @@ module.exports = {
     layout: 'default.11ty.js',
     cssPath: 'articles/list.11ty.css',
     jsPath: 'articles/list.entry.js',
+    title: 'Articles',
   }),
 };

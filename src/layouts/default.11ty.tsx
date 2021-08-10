@@ -33,7 +33,7 @@ import { Footer } from '@/modules/shared/components/footer';
  * -------------------------------- */
 
 function Page(this: IPage, { siteMeta, title = '', content, cssPath, jsPath }: IProps) {
-  const pageTitle = [siteMeta.pageTitle, title].filter((item) => !!item).join(' - ');
+  const pageTitle = [title, siteMeta.pageTitle].filter((item) => !!item).join(' - ');
   const pageCss = this.getAssetContents(['layouts/default.11ty.css', cssPath]);
 
   return (

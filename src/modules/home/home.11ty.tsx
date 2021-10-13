@@ -18,10 +18,7 @@ interface IProps extends IData {
  *
  * -------------------------------- */
 
-import { Html } from '@/modules/shared/components';
-import { Header } from '@/modules/shared/components/header';
 import { MainIntro } from '@/modules/home/components/mainIntro';
-import { Footer } from '@/modules/shared/components/footer';
 
 /* -----------------------------------
  *
@@ -29,24 +26,11 @@ import { Footer } from '@/modules/shared/components/footer';
  *
  * -------------------------------- */
 
-function Page(this: IPage, { siteMeta }: IProps) {
-  const inlineCss = this.getAssetContents('home/home.11ty.css');
-
+function Page(this: IPage) {
   return (
-    <Html
-      title={siteMeta.pageTitle}
-      summary={siteMeta.metaDescription}
-      inlineCss={inlineCss}
-      jsPath="home/home.entry.js"
-    >
-      <div class={style.wrapper}>
-        <Header />
-        <main class={style.content}>
-          <MainIntro />
-        </main>
-        <Footer />
-      </div>
-    </Html>
+    <main class={style.content}>
+      <MainIntro />
+    </main>
   );
 }
 
@@ -60,5 +44,8 @@ module.exports = {
   render: Page,
   data: () => ({
     permalink: 'index.html',
+    layout: 'default.11ty.js',
+    cssPath: 'home/home.11ty.css',
+    jsPath: 'home/home.entry.js',
   }),
 };

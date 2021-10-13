@@ -58,10 +58,18 @@ component-main-intro {
   }
 
   &:first-of-type {
-    font-weight: 300;
-    text-shadow: 0 0 rem(100) #fff, 0 0 rem(200) #fff, 0 0 rem(300) $colour-accent,
-      0 0 rem(400) $colour-accent, 0 0 rem(500) $colour-accent, 0 0 rem(1000) $colour-accent,
-      0 0 rem(1000) $colour-accent;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: $colour-accent;
+      content: attr(filter-content);
+      filter: url('@/styles/images/filter-blur.svg#filter-blur');
+      opacity: 0.7;
+      z-index: -1;
+    }
   }
 }
 

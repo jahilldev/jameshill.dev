@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg">
   <filter id="filter-blur" filterUnits="userSpaceOnUse">
-    <feGaussianBlur stdDeviation="25 0"></feGaussianBlur>
+    <feGaussianBlur stdDeviation="175 0"></feGaussianBlur>
   </filter>
 </svg>

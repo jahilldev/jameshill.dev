@@ -64,9 +64,11 @@ component-main-intro {
       position: absolute;
       left: 0;
       top: 0;
+      color: $colour-accent;
       content: attr(filter-content);
       filter: url('@/styles/images/filter-blur.svg#filter-blur');
-      opacity: 0.6;
+      opacity: 1;
+      z-index: -1;
     }
   }
 }

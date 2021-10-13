@@ -11,7 +11,9 @@ function MainIntro() {
   return (
     <section class={style.wrapper}>
       <div class={style.container}>
-        <em class={style.callout}>Hello</em>
+        <em class={style.callout} filter-content="Hello">
+          Hello
+        </em>
         <span class={style.callout}>&nbsp;</span>
         <em class={style.callout}>there</em>
         <p class={style.text}>

@@ -82,9 +82,15 @@
  * -------------------------------- */
 
 .link {
-  display: block;
+  display: inline-block;
   text-decoration: none;
   color: inherit;
+  padding-top: rem(1);
+  border-bottom: rem(1) solid transparent;
+
+  &:hover {
+    border-bottom-color: $colour-shadow;
+  }
 }
 
 /* -----------------------------------

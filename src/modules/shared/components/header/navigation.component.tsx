@@ -4,6 +4,14 @@ import style from './navigation.module.scss';
 
 /* -----------------------------------
  *
+ * Components
+ *
+ * -------------------------------- */
+
+import { MainMenu } from './mainMenu.component';
+
+/* -----------------------------------
+ *
  * Navigation
  *
  * -------------------------------- */
@@ -22,7 +30,11 @@ function Navigation() {
           <path d="M0 60h62c13 0 6-28-4-18L35 65" />
         </svg>
       </button>
-      {isActive && <menu class={style.menu}>Navigation Menu..</menu>}
+      {isActive && (
+        <menu class={style.menu}>
+          <MainMenu />
+        </menu>
+      )}
     </Fragment>
   );
 

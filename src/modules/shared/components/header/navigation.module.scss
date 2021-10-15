@@ -1,0 +1,66 @@
+@import 'template';
+
+/* -----------------------------------
+ *
+ * Button
+ *
+ * -------------------------------- */
+
+.button {
+  display: inline-block;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  width: rem(54);
+  height: rem(54);
+  cursor: pointer;
+
+  svg {
+    width: 160%;
+    height: 160%;
+    transform: translate(rem(-16), rem(-16));
+  }
+
+  circle {
+    fill: black;
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  path {
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    --length: 24;
+    --offset: -38;
+    stroke-dasharray: var(--length) var(--total-length);
+    stroke-dashoffset: var(--offset);
+    transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  path:nth-of-type(1),
+  path:nth-of-type(3) {
+    --total-length: 126.64183044433594;
+  }
+
+  path:nth-of-type(2) {
+    --total-length: 70;
+  }
+
+  &.active path:nth-of-type(1),
+  &.active path:nth-of-type(3) {
+    --length: 22.627416998;
+    --offset: -94.1149185097;
+  }
+
+  &.active path:nth-of-type(2) {
+    --length: 0;
+    --offset: -50;
+  }
+}

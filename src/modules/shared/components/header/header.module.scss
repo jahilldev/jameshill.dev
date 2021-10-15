@@ -9,7 +9,6 @@
 .header {
   @extend %container;
 
-  position: relative;
   display: flex;
   height: rem(78);
   max-width: none;
@@ -52,7 +51,9 @@
  * -------------------------------- */
 
 .menu {
+  display: flex;
   margin-left: auto;
+  align-items: center;
 
   a {
     color: white;

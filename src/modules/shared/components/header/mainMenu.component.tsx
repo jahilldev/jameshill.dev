@@ -11,7 +11,9 @@ function MainMenu() {
   return (
     <section class={style.wrapper}>
       <div class={style.inner}>
-        <h3 class={style.title}>Main Menu</h3>
+        <h3 class={style.title}>
+          <span>Main Menu</span>
+        </h3>
         <a href="/" class={style.link}>
           Home
         </a>

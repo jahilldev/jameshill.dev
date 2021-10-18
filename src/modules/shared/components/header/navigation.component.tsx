@@ -21,7 +21,8 @@ function Navigation() {
   const activeClass = isActive ? style.active : '';
 
   return (
-    <Fragment>
+    <nav class={style.navigation}>
+      <a href="/articles">Articles</a>
       <button class={`${style.button} ${activeClass}`} onClick={onClickToggle}>
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <circle cx="50" cy="50" r="30" />
@@ -30,8 +31,8 @@ function Navigation() {
           <path d="M0 60h62c13 0 6-28-4-18L35 65" />
         </svg>
       </button>
-      <menu class={`${style.menu} ${activeClass}`}>{isActive && <MainMenu />}</menu>
-    </Fragment>
+      <div class={`${style.overlay} ${activeClass}`}>{isActive && <MainMenu />}</div>
+    </nav>
   );
 
   function onClickToggle() {

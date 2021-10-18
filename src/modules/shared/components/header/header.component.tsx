@@ -21,10 +21,7 @@ function Header() {
       <a href="/" class={style.logo}>
         James
       </a>
-      <nav class={style.menu}>
-        <a href="/articles">Articles</a>
-        <Navigation />
-      </nav>
+      <Navigation />
     </header>
   );
 }

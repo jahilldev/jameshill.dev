@@ -8,7 +8,16 @@ import style from './mainMenu.module.scss';
  * -------------------------------- */
 
 function MainMenu() {
-  return <div class={style.container}>Main Menu...</div>;
+  return (
+    <section class={style.wrapper}>
+      <div class={style.inner}>
+        <h3 class={style.title}>Main Menu</h3>
+        <a href="/" class={style.link}>
+          Home
+        </a>
+      </div>
+    </section>
+  );
 }
 
 /* -----------------------------------

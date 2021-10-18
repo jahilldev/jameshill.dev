@@ -43,31 +43,3 @@
     border-radius: rem(1);
   }
 }
-
-/* -----------------------------------
- *
- * Menu
- *
- * -------------------------------- */
-
-.menu {
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-
-  a {
-    color: white;
-    font-size: rem(16);
-    font-weight: 300;
-    text-decoration: none;
-    margin: 0 rem(20);
-
-    @include breakpoint('md') {
-      font-size: rem(22);
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}

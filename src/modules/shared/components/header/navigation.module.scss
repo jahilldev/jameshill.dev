@@ -2,6 +2,34 @@
 
 /* -----------------------------------
  *
+ * Navigation
+ *
+ * -------------------------------- */
+
+.navigation {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+
+  > a {
+    color: white;
+    font-size: rem(16);
+    font-weight: 300;
+    text-decoration: none;
+    margin: 0 rem(20);
+
+    @include breakpoint('md') {
+      font-size: rem(22);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+/* -----------------------------------
+ *
  * Button
  *
  * -------------------------------- */
@@ -70,11 +98,11 @@
 
 /* -----------------------------------
  *
- * Menu
+ * Overlay
  *
  * -------------------------------- */
 
-.menu {
+.overlay {
   position: absolute;
   display: flex;
   align-items: center;
@@ -105,12 +133,10 @@
 
   &:after {
     background: rgba(9, 9, 12, 1);
-    -webkit-transition-delay: 0s;
     transition-delay: 0s;
   }
 
   &:before {
-    -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
   }
 

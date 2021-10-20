@@ -12,7 +12,7 @@ function MainMenu() {
     <section class={style.wrapper}>
       <div class={style.inner}>
         <h3 class={style.title}>
-          <span>Main Menu</span>
+          <span>Menu</span>
         </h3>
         <a href="/" class={style.link}>
           Home

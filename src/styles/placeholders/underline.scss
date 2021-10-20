@@ -1,0 +1,22 @@
+/* -----------------------------------
+ *
+ * Underline
+ *
+ * -------------------------------- */
+
+%underline {
+  &:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: rem(2);
+    bottom: 0;
+    left: 0;
+    background-color: $colour-accent;
+    border-radius: rem(1);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+}

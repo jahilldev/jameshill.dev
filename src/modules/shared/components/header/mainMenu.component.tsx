@@ -26,9 +26,10 @@ function MainMenu({ menuLinks }: IProps) {
           <span>Menu</span>
         </h3>
         <ul class={style.list}>
-          {menuLinks.map(({ linkText, href, attributes }, index) => (
+          {menuLinks.map(({ linkText, href, attributes, icon }, index) => (
             <li class={style.item}>
-              <a href={href} {...attributes} style={`--link-index: ${index + 1};`}>
+              <a href={href} {...attributes} style={`--index: ${index + 1};`}>
+                {icon && <i class={icon} />}
                 {linkText}
               </a>
             </li>

@@ -8,6 +8,7 @@ interface ILinks {
   linkText: string;
   href: string;
   attributes?: object;
+  icon?: string;
 }
 
 /* -----------------------------------
@@ -23,6 +24,7 @@ const menuLinks: ILinks[] = [
     linkText: 'Github',
     href: 'https://github.com/jhukdev',
     attributes: { rel: 'noreferrer', target: '_blank' },
+    icon: 'github',
   },
 ];
 

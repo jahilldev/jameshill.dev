@@ -34,7 +34,7 @@
   font-family: $font-accent;
   font-weight: 200;
   font-size: rem(52);
-  margin: 0 0 0.4em;
+  margin: 0 0 0.6em;
 
   span {
     @extend %underline;
@@ -68,8 +68,17 @@
 
 .item {
   display: block;
+  font-size: rem(24);
+  font-weight: 300;
+  margin: 0 0 0.75em;
 
   a {
     color: white;
+    text-decoration: none;
+    transition: margin 0.3s ease-in-out;
+
+    &:hover {
+      margin-left: rem(15);
+    }
   }
 }

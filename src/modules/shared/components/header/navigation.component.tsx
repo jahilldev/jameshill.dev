@@ -1,6 +1,17 @@
-import { h, Fragment } from 'preact';
+import { h } from 'preact';
 import { useState } from 'preact/hooks';
+import { ILinks } from '@/data/mainMenu';
 import style from './navigation.module.scss';
+
+/* -----------------------------------
+ *
+ * IProps
+ *
+ * -------------------------------- */
+
+interface IProps {
+  menuLinks: ILinks[];
+}
 
 /* -----------------------------------
  *
@@ -16,7 +27,7 @@ import { MainMenu } from './mainMenu.component';
  *
  * -------------------------------- */
 
-function Navigation() {
+function Navigation({ menuLinks }: IProps) {
   const [isActive, setActive] = useState(false);
   const activeClass = isActive ? style.active : '';
 
@@ -31,7 +42,9 @@ function Navigation() {
           <path d="M0 60h62c13 0 6-28-4-18L35 65" />
         </svg>
       </button>
-      <div class={`${style.overlay} ${activeClass}`}>{isActive && <MainMenu />}</div>
+      <div class={`${style.overlay} ${activeClass}`}>
+        {isActive && <MainMenu menuLinks={menuLinks} />}
+      </div>
     </nav>
   );
 

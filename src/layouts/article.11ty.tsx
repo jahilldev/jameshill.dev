@@ -44,6 +44,8 @@ import { Footer } from '@/modules/shared/components/footer';
 function Page(
   this: IPage,
   {
+    siteMeta,
+    mainMenu: { menuLinks },
     title,
     excerpt,
     image,
@@ -51,7 +53,6 @@ function Page(
     cssPath = 'layouts/article.11ty.css',
     jsPath = 'articles/article.entry.js',
     tags,
-    siteMeta,
     collections: { articles },
   }: IProps
 ) {
@@ -66,7 +67,7 @@ function Page(
       jsPath={jsPath}
     >
       <div class={style.wrapper}>
-        <Header />
+        <Header menuLinks={menuLinks} />
         <main class={style.content}>
           <Banner>
             <h3>Articles</h3>

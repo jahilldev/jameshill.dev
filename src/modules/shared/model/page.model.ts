@@ -1,4 +1,5 @@
 import * as siteMeta from '@/data/siteMeta';
+import * as mainMenu from '@/data/mainMenu';
 
 /* -----------------------------------
  *
@@ -23,6 +24,7 @@ interface IPage {
 
 interface IData {
   siteMeta: typeof siteMeta;
+  mainMenu: typeof mainMenu;
 }
 
 /* -----------------------------------

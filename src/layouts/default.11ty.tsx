@@ -32,14 +32,17 @@ import { Footer } from '@/modules/shared/components/footer';
  *
  * -------------------------------- */
 
-function Page(this: IPage, { siteMeta, title = '', content, cssPath, jsPath }: IProps) {
+function Page(
+  this: IPage,
+  { siteMeta, mainMenu: { menuLinks }, title = '', content, cssPath, jsPath }: IProps
+) {
   const pageTitle = [title, siteMeta.pageTitle].filter((item) => !!item).join(' - ');
   const pageCss = this.getAssetContents(['layouts/default.11ty.css', cssPath]);
 
   return (
     <Html title={pageTitle} inlineCss={pageCss} jsPath={jsPath}>
       <div class={style.wrapper}>
-        <Header />
+        <Header menuLinks={menuLinks} />
         {content}
         <Footer />
       </div>

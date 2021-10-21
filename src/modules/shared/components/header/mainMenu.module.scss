@@ -72,6 +72,10 @@
   font-weight: 300;
   margin: 0 0 0.75em;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   a {
     color: white;
     text-decoration: none;

@@ -25,10 +25,11 @@
   margin: 0;
   width: rem(100);
   overflow: hidden;
-  border: rem(1) solid $colour-shadow;
+  border: rem(2) solid $colour-shadow;
   border-radius: rem(5);
   flex-shrink: 0;
   align-self: flex-start;
+  transition: border 0.3s ease-in-out;
 
   @include breakpoint('sm') {
     display: block;
@@ -47,6 +48,10 @@
     display: block;
     content: '';
     padding-bottom: (300 / 420) * 100%;
+  }
+
+  &:hover {
+    border: rem(2) solid $colour-accent;
   }
 
   img {
@@ -89,9 +94,15 @@
   text-decoration: none;
   color: inherit;
 
-  &:hover:before {
-    animation-name: scaleX;
+  &:before {
+    transition: transform 0.3s ease-in-out, opacity 0.8s ease-in-out;
+    opacity: 0;
     bottom: rem(-4);
+  }
+
+  &:hover:before {
+    transform: scaleX(1);
+    opacity: 1;
   }
 }
 

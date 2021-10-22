@@ -17,9 +17,14 @@
     font-weight: 300;
     text-decoration: none;
     margin: 0 rem(20);
+    transition: color 0.2s ease-in-out;
 
     @include breakpoint('md') {
       font-size: rem(22);
+    }
+
+    &:hover {
+      color: $colour-accent;
     }
 
     &:last-child {

@@ -22,6 +22,11 @@
 .inner {
   max-width: rem(480);
   margin: 0 auto;
+  padding: 0 rem(10);
+
+  @include breakpoint('md') {
+    padding: 0;
+  }
 }
 
 /* -----------------------------------

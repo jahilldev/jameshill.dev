@@ -8,6 +8,12 @@
 
 .html {
   height: 100%;
+
+  &:global(.no-scroll) {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+  }
 }
 
 /* -----------------------------------

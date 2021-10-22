@@ -49,7 +49,14 @@ function Navigation({ menuLinks }: IProps) {
   );
 
   function onClickToggle() {
+    const htmlElement = document.documentElement;
+    const isScrollBar = document.body.scrollHeight > document.body.clientHeight;
+
     setActive(!isActive);
+
+    if (isScrollBar) {
+      htmlElement.classList.toggle('no-scroll');
+    }
   }
 }
 

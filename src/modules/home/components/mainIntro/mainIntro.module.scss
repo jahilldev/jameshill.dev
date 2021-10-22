@@ -50,7 +50,7 @@ component-main-intro {
   line-height: 1;
 
   @include breakpoint('lg') {
-    font-size: rem(120);
+    font-size: rem(140);
   }
 
   &:first-of-type {

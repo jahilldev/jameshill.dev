@@ -12,6 +12,7 @@
   margin: 0;
   background: $colour-light;
   box-sizing: border-box;
+  border: rem(1) solid $colour-shadow;
 
   @include breakpoint('sm') {
     margin: 0 auto;

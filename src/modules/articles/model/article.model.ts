@@ -8,7 +8,8 @@ interface IArticle {
   title: string;
   tagline: string;
   excerpt: string;
-  image: string;
+  bannerImage?: string;
+  thumbImage: string;
   tags: string[];
   publish: boolean;
   date: Date;

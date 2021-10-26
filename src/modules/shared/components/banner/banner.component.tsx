@@ -1,4 +1,5 @@
 import { h } from 'preact';
+import classNames from 'classnames';
 import style from './banner.module.scss';
 
 /* -----------------------------------
@@ -8,6 +9,7 @@ import style from './banner.module.scss';
  * -------------------------------- */
 
 interface IProps {
+  bannerImage?: string;
   children: any;
 }
 
@@ -17,9 +19,13 @@ interface IProps {
  *
  * -------------------------------- */
 
-function Banner({ children }: IProps) {
+function Banner({ bannerImage, children }: IProps) {
+  const wrapperClass = classNames(style.banner, {
+    [style.image]: bannerImage,
+  });
+
   return (
-    <section class={style.banner}>
+    <section class={wrapperClass} style={`background-image: url(${bannerImage})`}>
       <div class={style.container}>{children}</div>
     </section>
   );

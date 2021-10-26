@@ -14,7 +14,8 @@ import '@/styles/monokai.css';
 interface IProps extends IData {
   title: string;
   excerpt: string;
-  image: string;
+  bannerImage?: string;
+  thumbImage: string;
   content: string;
   cssPath: string;
   jsPath: string;
@@ -48,7 +49,8 @@ function Page(
     mainMenu: { menuLinks },
     title,
     excerpt,
-    image,
+    thumbImage,
+    bannerImage,
     content,
     cssPath = 'layouts/article.11ty.css',
     jsPath = 'articles/article.entry.js',
@@ -62,20 +64,20 @@ function Page(
     <Html
       title={`${title} - ${siteMeta.pageTitle}`}
       summary={excerpt}
-      image={`https://jameshill.dev/articles/_images/${image}`}
+      image={`https://jameshill.dev/articles/_images/${thumbImage}`}
       inlineCss={inlineCss}
       jsPath={jsPath}
     >
       <div class={style.wrapper}>
         <Header menuLinks={menuLinks} />
         <main class={style.content}>
-          <Banner>
-            <h3>Articles</h3>
+          <Banner bannerImage={bannerImage}>
+            <h1>{title}</h1>
           </Banner>
           <div class={style.container}>
             <div class={style.layout}>
               <article>
-                <h1 class={style.title}>{title}</h1>
+                {/* {!banner && <h1 class={style.title}>{title}</h1>} */}
                 <div class={style.article} dangerouslySetInnerHTML={{ __html: content }} />
               </article>
               <aside>

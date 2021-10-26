@@ -3,7 +3,7 @@ title: I used 11ty and... It's awesome
 tagline: A tale of many sites
 tags: ['11ty', 'static sites', 'tooling', 'jamstack', 'opinion']
 excerpt: More static site generators, or JAMStack projects, are cropping up by the day. Here's a quick look at how I built this site.
-image: jamstack-thumbnail.jpg
+thumbImage: jamstack-thumbnail.jpg
 publish: true
 date: 2020-10-29
 article: true

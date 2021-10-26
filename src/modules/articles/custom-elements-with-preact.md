@@ -3,7 +3,7 @@ title: Custom elements and Preact
 tagline: Let the DOM do the work
 tags: ['code', 'preact', 'jsx', 'javascript', 'custom elements', 'web components']
 excerpt: Integrating Preact into other frameworks can be tricky. Let the DOM handle it via custom elements and their lifecycle methods.
-image: web-components-thumbnail.jpg
+thumbImage: web-components-thumbnail.jpg
 publish: true
 date: 2021-02-12
 article: true

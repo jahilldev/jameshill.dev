@@ -152,6 +152,7 @@
     background: #23241f;
     border-radius: rem(4);
     box-sizing: border-box;
+    font-size: 0.9em;
   }
 
   code:not([class*='language-']) {
@@ -161,7 +162,6 @@
     border: rem(1) solid $colour-shadow;
     padding: 0 rem(4);
     border-radius: rem(2);
-    font-size: inherit;
     box-sizing: border-box;
   }
 }

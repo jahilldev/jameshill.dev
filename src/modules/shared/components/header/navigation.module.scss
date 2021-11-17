@@ -58,7 +58,11 @@
   }
 
   circle {
-    fill: black;
+    fill: none;
+  }
+
+  &.active circle {
+    fill: #111;
   }
 
   path {

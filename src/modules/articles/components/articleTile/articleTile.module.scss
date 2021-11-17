@@ -96,6 +96,7 @@
 
   &:before {
     transition: transform 0.3s ease-in-out, opacity 1s ease-in-out;
+    background-color: $colour-shadow;
     opacity: 0;
     bottom: rem(-4);
   }

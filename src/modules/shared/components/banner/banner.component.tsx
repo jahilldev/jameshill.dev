@@ -24,8 +24,10 @@ function Banner({ bannerImage, children }: IProps) {
     [style.image]: bannerImage,
   });
 
+  const bannerStyle = bannerImage && `background-image: url(${bannerImage})`;
+
   return (
-    <section class={wrapperClass} style={`background-image: url(${bannerImage})`}>
+    <section class={wrapperClass} style={bannerStyle}>
       <div class={style.container}>{children}</div>
     </section>
   );

@@ -20,6 +20,7 @@ interface ILinks {
 const menuLinks: ILinks[] = [
   { linkText: 'Homepage', href: '/' },
   { linkText: 'Articles', href: '/articles' },
+  // { linkText: 'Workshop', href: '/workshop' },
   {
     linkText: 'Github',
     href: 'https://github.com/jhukdev',

@@ -21,6 +21,7 @@ module.exports = function (config) {
 
   config.setUseGitIgnore(false);
   config.setDataDeepMerge(true);
+  config.setWatchThrottleWaitTime(300);
 
   config.addPlugin(syntaxHighlight);
 

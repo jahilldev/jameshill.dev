@@ -1,6 +1,7 @@
 const glob = require('glob');
 const path = require('path');
 const fs = require('fs');
+const { argv } = require('yargs');
 const { DefinePlugin } = require('webpack');
 const ExtractCssPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -13,7 +14,8 @@ const TerserPlugin = require('terser-webpack-plugin');
  *
  * -------------------------------- */
 
-const RELEASE = !process.argv.includes('--watch');
+const MODE = argv.mode || 'development';
+const RELEASE = argv.mode === 'production';
 
 /* -----------------------------------
  *
@@ -41,7 +43,7 @@ const sassLoader = {
  * -------------------------------- */
 
 const data = {
-  mode: RELEASE ? 'production' : 'development',
+  mode: MODE,
   entry: getDataFiles(),
   context: path.join(__dirname, '/src/'),
   cache: true,
@@ -106,7 +108,7 @@ const data = {
  * -------------------------------- */
 
 const pages = {
-  mode: RELEASE ? 'production' : 'development',
+  mode: MODE,
   entry: glob.sync(`${__dirname}/src/**/*.11ty.ts*`).reduce(getSourceFile, {}),
   context: path.join(__dirname, '/src/'),
   cache: true,
@@ -244,7 +246,7 @@ const pages = {
  * -------------------------------- */
 
 const entry = {
-  mode: RELEASE ? 'production' : 'development',
+  mode: MODE,
   entry: glob.sync(`${__dirname}/src/modules/**/*.entry.ts*`).reduce(getSourceFile, {}),
   context: path.join(__dirname, '/src/'),
   cache: true,

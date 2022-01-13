@@ -24,7 +24,7 @@
     "classnames": "^2.3.1",
     "preact": "10.6.4",
     "preact-render-to-string": "5.1.19",
-    "preactement": "1.6.4"
+    "preactement": "1.6.5"
   },
   "devDependencies": {
     "@11ty/eleventy": "1.0.0",

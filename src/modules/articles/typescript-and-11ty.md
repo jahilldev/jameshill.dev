@@ -10,7 +10,7 @@ article: true
 layout: article.11ty.js
 ---
 
-TypeScript has never been so popular (2022). Going through a seemingly endless spike in popularity, more and more projects are relying on the benefits of type safety that it provides. 
+TypeScript has never been so popular than it is now in 2022. Going through a seemingly endless spike in popularity, more and more projects are relying on the benefits of type safety that it provides. 
 
 One project that, at time of writing, doesn't provide a clear method of integration however, is 11ty. This is likely by design; 11ty's goal is to be a bare metal static site generator, where you bring your own.. everything. Aside from template syntax, or generating the HTML, everything else is handled by plugins or developer integration.
 

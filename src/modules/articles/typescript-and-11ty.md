@@ -135,7 +135,7 @@ Personally, I use `npm-run-all` to orchestrate this build order. Once installed,
 
 The above is meant as a rough guide, mileage may vary. It's likely you'll need to tweak the above to work properly with your file structure, project and needs. If you need a working example to reference, check out my 11ty starter:
 
-https://github.com/jhukdev/11tyby
+<a href="https://github.com/jhukdev/11tyby" target="_blank" rel="noopener">https://github.com/jhukdev/11tyby</a>
 
 It takes all of the above, and more. Providing out of the box Preact / JSX support, SCSS, and other useful things.
 

@@ -12,7 +12,7 @@
     "build": "npm-run-all clean build:*",
     "build:pages": "webpack --mode=production",
     "build:11ty": "eleventy --quiet",
-    "watch:pages": "yarn build:pages --watch",
+    "watch:pages": "webpack --watch",
     "watch:11ty": "eleventy --serve --quiet --watch",
     "lint": "eslint ./src/**/*.ts*",
     "test": "jest"

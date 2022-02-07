@@ -160,11 +160,11 @@ pre[class*='language-'] {
  * Diff plugin
  */
 
-.inserted {
+.token.inserted {
   background-color: hsl(120deg 73% 75% / 20%);
 }
 
-.deleted {
+.token.deleted {
   background-color: hsl(350deg 100% 88% / 20%);
 }
 

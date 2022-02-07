@@ -23,7 +23,11 @@ module.exports = function (config) {
   config.setDataDeepMerge(true);
   config.setWatchThrottleWaitTime(300);
 
-  config.addPlugin(syntaxHighlight);
+  config.addPlugin(syntaxHighlight, {
+    init: function ({ Prism }) {
+      // Prism ... ['html', 'css', 'scss', 'js', 'jsx', 'ts', 'tsx'];
+    },
+  });
 
   config.addTransform('jsx', (content) => {
     if (isValidElement(content)) {

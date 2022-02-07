@@ -62,6 +62,10 @@ pre[class*='language-'] {
   color: #f92672;
 }
 
+.token.property {
+  color: white;
+}
+
 .token.constant {
   color: #63d6ef;
 }

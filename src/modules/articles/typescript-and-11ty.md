@@ -30,7 +30,7 @@ $ yarn add --dev typescript glob webpack webpack-cli ts-loader
 
 With that finished, we need to create our Webpack config. The following is a very basic, highly contrived example. It assumes a directory structure, but can easily be modified depending on your project:
 
-```typescript
+```js
 const glob = require('glob');
 
 /*[...]*/

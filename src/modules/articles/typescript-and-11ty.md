@@ -105,12 +105,12 @@ module.exports = function (config) {
 
 Now that we've got 11ty looking in the right place, we add another script to our `package.json`:
 
-```json
+```diff-json
 {
  /*[...]*/
  "scripts": {
    "watch:pages": "webpack --watch",
-   "watch:11ty": "eleventy --serve --quiet --watch"
++  "watch:11ty": "eleventy --serve --quiet --watch"
  }
 }
 ```
@@ -119,12 +119,12 @@ Aside from any bells and whistles you might like / need, that's pretty much it! 
 
 Personally, I use `npm-run-all` to orchestrate this build order. Once installed, we can update our `package.json`:
 
-```json
+```diff-json
 {
  /*[...]*/
  "scripts": {
-   "start": "npm-run-all pages -p watch:*",
-   "pages": "webpack",
++  "start": "npm-run-all pages -p watch:*",
++  "pages": "webpack",
    "watch:pages": "webpack --watch",
    "watch:11ty": "eleventy --serve --quiet --watch"
  }

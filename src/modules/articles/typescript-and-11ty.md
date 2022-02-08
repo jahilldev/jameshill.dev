@@ -117,7 +117,7 @@ Now that we've got 11ty looking in the right place, we add another script to our
 
 Aside from any bells and whistles you might like / need, that's pretty much it! The trick is to run Webpack *before* 11ty, ensuring that by the time 11ty is run, we have all of the source files ready to run through the build.
 
-Personally, I use `npm-run-all` to orchestrate this build order. Once installed, we can update our `package.json`:
+Personally, I use <a href="https://www.npmjs.com/package/npm-run-all" target="_blank" rel="noopener">npm-run-all</a> to orchestrate this build order. Once installed, we can update our `package.json`:
 
 ```diff-json
 {

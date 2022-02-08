@@ -47,7 +47,7 @@ pre[class*='language-'] {
 }
 
 .token.class-name {
-  color: #63d6ef;
+  color: #66d9ef;
 }
 
 .namespace {
@@ -67,7 +67,7 @@ pre[class*='language-'] {
 }
 
 .token.constant {
-  color: #63d6ef;
+  color: #66d9ef;
 }
 
 .token.boolean,
@@ -83,7 +83,7 @@ pre[class*='language-'] {
 }
 
 .token.builtin {
-  color: #63d6ef;
+  color: #66d9ef;
 }
 
 .token.operator,
@@ -131,11 +131,11 @@ pre[class*='language-'] {
  */
 
 .token.keyword-const {
-  color: #63d6ef;
+  color: #66d9ef;
 }
 
 .token.keyword-function {
-  color: #63d6ef;
+  color: #66d9ef;
 }
 
 .code-toolbar {
@@ -175,5 +175,5 @@ pre[class*='language-'] {
  * -------------------------------- */
 
 [class*="language-json"] .property {
-  color: #63d6ef;
+  color: #66d9ef;
 }

@@ -1,0 +1,25 @@
+@import 'template';
+
+/* -----------------------------------
+ *
+ * Pagination
+ *
+ * -------------------------------- */
+
+.pagination {
+  display: block;
+}
+
+/* -----------------------------------
+ *
+ * Link
+ *
+ * -------------------------------- */
+
+.link {
+  display: inline-block;
+
+  &.active {
+    pointer-events: none;
+  }
+}

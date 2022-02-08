@@ -168,6 +168,13 @@ pre[class*='language-'] {
   background-color: hsl(350deg 100% 88% / 20%);
 }
 
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
 /* -----------------------------------
  *
  * JSON

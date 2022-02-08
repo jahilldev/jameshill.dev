@@ -9,6 +9,7 @@ import style from './pagination.module.scss';
  * -------------------------------- */
 
 interface IProps {
+  className: string;
   pageIndex: number;
   pageLinks: any;
 }
@@ -19,18 +20,24 @@ interface IProps {
  *
  * -------------------------------- */
 
-function Pagination({ pageIndex, pageLinks }: IProps) {
+function Pagination({ className, pageIndex, pageLinks }: IProps) {
+  const wrapperClass = classNames(style.pagination, className);
+
   if (pageLinks.length <= 1) {
     return;
   }
 
   return (
-    <nav>
-      {pageLinks.map((linkHref, index) => (
-        <a href={linkHref} class={classNames({ [style.active]: pageIndex === index })}>
-          {index + 1}
-        </a>
-      ))}
+    <nav class={wrapperClass}>
+      {pageLinks.map((linkHref, index) => {
+        const linkClass = classNames(style.link, { [style.active]: pageIndex === index });
+
+        return (
+          <a href={linkHref} class={linkClass}>
+            {index + 1}
+          </a>
+        );
+      })}
     </nav>
   );
 }

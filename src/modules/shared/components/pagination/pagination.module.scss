@@ -17,9 +17,43 @@
  * -------------------------------- */
 
 .link {
+  position: relative;
   display: inline-block;
+  font-family: $font-accent;
+  font-size: rem(18);
+  border: rem(1) solid $colour-shadow;
+  border-radius: rem(2);
+  padding: rem(8) rem(12);
+  min-width: rem(24);
+  text-align: center;
+  text-decoration: none;
+  margin: 0 rem(12) 0 0;
+  color: $colour-text;
+
+  &:before {
+    position: absolute;
+    display: none;
+    content: '';
+    bottom: rem(1);
+    left: rem(1);
+    right: rem(1);
+    height: rem(3);
+    background: $colour-accent;
+  }
+
+  &:hover {
+    color: $colour-accent;
+  }
+
+  @include breakpoint('md') {
+    font-size: rem(24);
+  }
 
   &.active {
     pointer-events: none;
+
+    &:before {
+      display: block;
+    }
   }
 }

@@ -46,7 +46,11 @@ function Page(
         <div class={style.layout}>
           <article class={style.column}>
             <ArticleList className={style.articles} articles={pages[pageNumber]} />
-            <Pagination pageIndex={pageNumber} pageLinks={links} />
+            <Pagination
+              className={style.pagination}
+              pageIndex={pageNumber}
+              pageLinks={links}
+            />
           </article>
           <aside>
             <ProfileImage className={style.profile} />

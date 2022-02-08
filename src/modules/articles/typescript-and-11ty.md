@@ -12,6 +12,14 @@ layout: article.11ty.js
 
 TypeScript has never been more popular than it is now in 2022. Going through a seemingly endless spike in popularity, more and more projects are relying on the benefits of type safety that it provides. 
 
+<!-- <figure>
+  <picture>
+    <source media="(min-width: 64em)" srcset="https://res.cloudinary.com/jahill/image/upload/v1644337612/articles/typescript-banner_wo31g0.jpg" />
+    <source media="(min-width: 0)" srcset="https://res.cloudinary.com/jahill/image/upload/f_auto,fl_strip_profile,w_480,h_220,c_fill/v1644337612/articles/typescript-banner_wo31g0.jpg" />
+    <img src="https://res.cloudinary.com/jahill/image/upload/f_auto,fl_strip_profile,w_480,h_220,c_fill/v1644337612/articles/typescript-banner_wo31g0.jpg">
+  </picture>
+</figure> -->
+
 One project that, at time of writing, doesn't provide a clear method of integration however, is 11ty. This is likely by design; 11ty's goal is to be a bare metal static site generator, where you bring your own.. everything. Aside from template syntax, or generating the HTML, everything else is handled by plugins or developer integration.
 
 This makes 11ty an excellent choice for those who like to, or are able to, dig deep into their tech stack to optimise and cater for requirements specific to their use case.

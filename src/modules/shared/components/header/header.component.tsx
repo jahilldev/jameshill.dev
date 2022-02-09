@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { ILinks } from '@/data/mainMenu';
+import { ILink } from '@/data/mainMenu';
 import style from './header.module.scss';
 
 /* -----------------------------------
@@ -9,7 +9,7 @@ import style from './header.module.scss';
  * -------------------------------- */
 
 interface IProps {
-  menuLinks: ILinks[];
+  menuLinks: ILink[];
 }
 
 /* -----------------------------------

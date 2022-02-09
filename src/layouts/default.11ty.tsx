@@ -34,7 +34,15 @@ import { Footer } from '@/modules/shared/components/footer';
 
 function Page(
   this: IPage,
-  { siteMeta, mainMenu: { menuLinks }, title = '', content, cssPath, jsPath }: IProps
+  {
+    siteMeta,
+    mainMenu: { menuLinks },
+    socialMenu: { socialLinks },
+    title = '',
+    content,
+    cssPath,
+    jsPath,
+  }: IProps
 ) {
   const pageTitle = [title, siteMeta.pageTitle].filter((item) => !!item).join(' - ');
   const pageCss = this.getAssetContents(['layouts/default.11ty.css', cssPath]);
@@ -44,7 +52,7 @@ function Page(
       <div class={style.wrapper}>
         <Header menuLinks={menuLinks} />
         {content}
-        <Footer />
+        <Footer socialLinks={socialLinks} />
       </div>
     </Html>
   );

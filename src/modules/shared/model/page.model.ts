@@ -1,5 +1,6 @@
 import * as siteMeta from '@/data/siteMeta';
 import * as mainMenu from '@/data/mainMenu';
+import * as socialMenu from '@/data/socialMenu';
 
 /* -----------------------------------
  *
@@ -25,6 +26,7 @@ interface IPage {
 interface IData {
   siteMeta: typeof siteMeta;
   mainMenu: typeof mainMenu;
+  socialMenu: typeof socialMenu;
   pagination?: IPagination;
 }
 

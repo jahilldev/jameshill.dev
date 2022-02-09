@@ -47,6 +47,7 @@ function Page(
   {
     siteMeta,
     mainMenu: { menuLinks },
+    socialMenu: { socialLinks },
     title,
     excerpt,
     thumbImage,
@@ -96,7 +97,7 @@ function Page(
             </div>
           </div>
         </main>
-        <Footer />
+        <Footer socialLinks={socialLinks} />
       </div>
     </Html>
   );

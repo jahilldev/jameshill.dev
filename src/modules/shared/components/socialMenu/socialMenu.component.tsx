@@ -1,4 +1,5 @@
 import { h } from 'preact';
+import { ILink } from '@/data/socialMenu';
 import style from './socialMenu.module.scss';
 
 /* -----------------------------------
@@ -9,17 +10,8 @@ import style from './socialMenu.module.scss';
 
 interface IProps {
   className?: string;
+  socialLinks: ILink[];
 }
-
-/* -----------------------------------
- *
- * Images
- *
- * -------------------------------- */
-
-import twitterIcon from '@/styles/images/twitter-icon.svg';
-import githubIcon from '@/styles/images/github-icon.svg';
-import linkedinIcon from '@/styles/images/linkedin-icon.svg';
 
 /* -----------------------------------
  *
@@ -27,33 +19,14 @@ import linkedinIcon from '@/styles/images/linkedin-icon.svg';
  *
  * -------------------------------- */
 
-function SocialMenu({ className = '' }: IProps) {
+function SocialMenu({ className = '', socialLinks }: IProps) {
   return (
     <nav class={`${style.social} ${className}`}>
-      <a
-        href="https://twitter.com/jahilldev"
-        target="_blank"
-        rel="noreferrer"
-        class={style.link}
-      >
-        <img src={twitterIcon} class={style.icon} width="26" height="26" alt="Twitter" />
-      </a>
-      <a
-        href="https://github.com/jahilldev"
-        target="_blank"
-        rel="noreferrer"
-        class={style.link}
-      >
-        <img src={githubIcon} class={style.icon} width="26" height="26" alt="Twitter" />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/jameshill-dev"
-        target="_blank"
-        rel="noreferrer"
-        class={style.link}
-      >
-        <img src={linkedinIcon} class={style.icon} width="26" height="26" alt="Twitter" />
-      </a>
+      {socialLinks.map(({ href, imageSrc, attributes = {} }) => (
+        <a href={href} target="_blank" rel="noreferrer" class={style.link} {...attributes}>
+          <img src={imageSrc} class={style.icon} width="26" height="26" alt="Twitter" />
+        </a>
+      ))}
     </nav>
   );
 }

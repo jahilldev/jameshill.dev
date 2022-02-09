@@ -1,5 +1,16 @@
 import { h } from 'preact';
+import { ILink } from '@/data/socialMenu';
 import style from './footer.module.scss';
+
+/* -----------------------------------
+ *
+ * IProps
+ *
+ * -------------------------------- */
+
+interface IProps {
+  socialLinks: ILink[];
+}
 
 /* -----------------------------------
  *
@@ -15,10 +26,10 @@ import { SocialMenu } from '@/modules/shared/components/socialMenu';
  *
  * -------------------------------- */
 
-function Footer() {
+function Footer({ socialLinks }: IProps) {
   return (
     <footer class={style.footer}>
-      <SocialMenu className={style.social} />
+      <SocialMenu className={style.social} socialLinks={socialLinks} />
     </footer>
   );
 }

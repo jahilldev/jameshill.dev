@@ -87,6 +87,18 @@ const data = {
           },
         ],
       },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[hash:8].[ext]',
+              outputPath: '/assets',
+            },
+          },
+        ],
+      },
     ],
   },
   optimization: {

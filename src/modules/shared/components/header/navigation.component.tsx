@@ -1,7 +1,7 @@
 import { h } from 'preact';
 import { useState } from 'preact/hooks';
 import classNames from 'classnames';
-import { ILinks } from '@/data/mainMenu';
+import { ILink } from '@/data/mainMenu';
 import style from './navigation.module.scss';
 
 /* -----------------------------------
@@ -11,7 +11,7 @@ import style from './navigation.module.scss';
  * -------------------------------- */
 
 interface IProps {
-  menuLinks: ILinks[];
+  menuLinks: ILink[];
 }
 
 /* -----------------------------------

@@ -4,7 +4,7 @@
  *
  * -------------------------------- */
 
-interface ILinks {
+interface ILink {
   linkText: string;
   href: string;
   attributes?: object;
@@ -17,7 +17,7 @@ interface ILinks {
  *
  * -------------------------------- */
 
-const menuLinks: ILinks[] = [
+const menuLinks: ILink[] = [
   { linkText: 'Homepage', href: '/' },
   { linkText: 'Articles', href: '/articles' },
   // { linkText: 'Workshop', href: '/workshop' },
@@ -35,4 +35,4 @@ const menuLinks: ILinks[] = [
  *
  * -------------------------------- */
 
-export { ILinks, menuLinks };
+export { ILink, menuLinks };

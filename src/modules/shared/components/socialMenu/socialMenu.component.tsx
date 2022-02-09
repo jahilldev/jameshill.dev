@@ -31,7 +31,7 @@ function SocialMenu({ className = '' }: IProps) {
   return (
     <nav class={`${style.social} ${className}`}>
       <a
-        href="https://twitter.com/jhukdev"
+        href="https://twitter.com/jahill_dev"
         target="_blank"
         rel="noreferrer"
         class={style.link}

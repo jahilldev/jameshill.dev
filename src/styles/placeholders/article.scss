@@ -96,6 +96,8 @@
     font-family: $font-accent;
     color: #222;
     font-weight: 500;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 
     &:hover {
       text-decoration: none;

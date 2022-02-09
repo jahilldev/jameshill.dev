@@ -135,6 +135,10 @@ const pages = {
     extensions: ['.js', '.ts', '.tsx', '.json', '.scss'],
     alias: {
       '@': path.resolve(__dirname, `./src/`),
+      react: 'preact/compat',
+      'react-dom/test-utils': 'preact/test-utils',
+      'react-dom': 'preact/compat',
+      'react/jsx-runtime': 'preact/jsx-runtime',
     },
   },
   plugins: [
@@ -272,6 +276,10 @@ const entry = {
     extensions: ['.js', '.ts', '.tsx', '.json', '.scss'],
     alias: {
       '@': path.resolve(__dirname, `./src/`),
+      react: 'preact/compat',
+      'react-dom/test-utils': 'preact/test-utils',
+      'react-dom': 'preact/compat',
+      'react/jsx-runtime': 'preact/jsx-runtime',
     },
   },
   plugins: [

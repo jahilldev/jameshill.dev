@@ -143,7 +143,7 @@ Personally, I use <a href="https://www.npmjs.com/package/npm-run-all" target="_b
 
 The above is meant as a rough guide, mileage may vary. It's likely you'll need to tweak the above to work properly with your file structure, project and needs. If you need a working example for reference, check out my 11ty starter:
 
-<a href="https://github.com/jhukdev/11tyby" target="_blank" rel="noopener">https://github.com/jhukdev/11tyby</a>
+<a href="https://github.com/jahill-dev/11tyby" target="_blank" rel="noopener">https://github.com/jahill-dev/11tyby</a>
 
 It takes all of the above, and more. Providing out of the box Preact / JSX support, SCSS, and other useful things.
 

@@ -50,7 +50,7 @@ function Html({ title = 'James', summary, image, inlineCss, jsPath, children }: 
           content="mHNYu_uJnuUYYZmD8zONumXaKqZX4-TNzTs-60O6oEY"
         />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@jhukdev" />
+        <meta name="twitter:site" content="@jahill_dev" />
         <meta name="twitter:title" content={title} />
         {summary && <meta name="twitter:description" content={summary} />}
         {image && <meta name="twitter:image:src" content={image} />}

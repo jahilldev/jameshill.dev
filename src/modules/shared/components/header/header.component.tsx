@@ -30,7 +30,7 @@ function Header({ menuLinks }: IProps) {
   return (
     <header class={style.header}>
       <a href="/" class={style.logo}>
-        James
+        james
       </a>
       <Navigation menuLinks={menuLinks} />
     </header>

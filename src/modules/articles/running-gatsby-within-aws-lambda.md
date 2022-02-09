@@ -222,6 +222,6 @@ async function deployFiles() {
 
 All that's left for us to do is zip our Lambda up with it's relevant dependencies, those of our actual site, and of course all of the Gatsby config files needed for it to run.
 
-If you'd like to see a more complete version, check out the <a href="https://github.com/jahill-dev/gatsby-lambda" target="_blank" rel="noopener">repo here</a>. I've opted for TypeScript there, cos why not, but the general structure is the same.
+If you'd like to see a more complete version, check out the <a href="https://github.com/jahilldev/gatsby-lambda" target="_blank" rel="noopener">repo here</a>. I've opted for TypeScript there, cos why not, but the general structure is the same.
 
 Happy building.

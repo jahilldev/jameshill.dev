@@ -10,7 +10,7 @@ article: true
 layout: article.11ty.js
 ---
 
-> TL/DR: The package <a href="https://github.com/jahill-dev/preactement" target="_blank" rel="noopener">preactement</a> allows you to easily wrap any Preact component in a custom element. It provides both synchronous, and asynchronous rendering.
+> TL/DR: The package <a href="https://github.com/jahilldev/preactement" target="_blank" rel="noopener">preactement</a> allows you to easily wrap any Preact component in a custom element. It provides both synchronous, and asynchronous rendering.
 
 Preact is a fantastic fit for bringing the power of a virtual DOM, and JSX, to existing projects. For one, it's small and light, enough not to exacerbate any pre-existing issues from other frameworks that might be in use. It's also API compatible with React, so you get access to the powerful ecosystem of third party components that exist today.
 
@@ -97,7 +97,7 @@ Luckily for us, there's a great library created by the guys behind Preact: <a hr
 
 This package is fantastic if you're happy to statically import your components. It doesn't, however, provide (at time of writing) the ability to defer loading of your code until needed via dynamic imports. I needed just this usecase, so, standing on the shoulders and all of that, I _borrowed_ a good chunk of this library to solve my needs.
 
-The result of this was <a href="https://github.com/jahill-dev/preactement" target="_blank" rel="noopener">preactement</a>. Having _borrowed_ the general workings of `preact-custom-element`, I went to work extending this slightly to allow for asynchronous loading of Preact components within `connectedCallback()`.
+The result of this was <a href="https://github.com/jahilldev/preactement" target="_blank" rel="noopener">preactement</a>. Having _borrowed_ the general workings of `preact-custom-element`, I went to work extending this slightly to allow for asynchronous loading of Preact components within `connectedCallback()`.
 
 Now, whenever you want to Preact-ify some part of your existing code base, all you need to do is the following:
 

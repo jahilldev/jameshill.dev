@@ -23,7 +23,7 @@ const menuLinks: ILinks[] = [
   // { linkText: 'Workshop', href: '/workshop' },
   {
     linkText: 'Github',
-    href: 'https://github.com/jahill-dev',
+    href: 'https://github.com/jahilldev',
     attributes: { rel: 'noreferrer', target: '_blank' },
     icon: 'github',
   },

@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import { IArticle } from '@/modules/articles/model/article.model';
+import { EMPTY_IMAGE } from '@/modules/shared/model/values.model';
 import style from './articleTile.module.scss';
 
 /* -----------------------------------
@@ -10,6 +11,7 @@ import style from './articleTile.module.scss';
 
 interface IProps {
   article: IArticle;
+  lazyLoad: boolean;
   url: string;
   className?: string;
 }
@@ -20,11 +22,20 @@ interface IProps {
  *
  * -------------------------------- */
 
-function ArticleTile({ article, url, className = '' }: IProps) {
+function ArticleTile({ lazyLoad, article, url, className = '' }: IProps) {
   return (
     <section class={`${style.tile} ${className}`}>
       <a href={url} class={style.image}>
-        <img src={`/${article.thumbImage}`} alt="Post" loading="lazy" />
+        <picture>
+          <source media="(min-width: 35.5em)" srcset={`/${article.thumbImage}`} />
+          <source media="(min-width: 0em)" srcset={EMPTY_IMAGE} />
+          <img
+            class="tile-uber-callout-image"
+            src={EMPTY_IMAGE}
+            alt="Post"
+            loading={lazyLoad ? 'lazy' : 'eager'}
+          />
+        </picture>
       </a>
       <div class={style.content}>
         <h2 class={style.title}>

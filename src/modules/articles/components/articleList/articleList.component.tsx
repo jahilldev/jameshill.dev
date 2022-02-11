@@ -31,9 +31,9 @@ import { ArticleTile } from '@/modules/articles/components/articleTile';
 function ArticleList({ className = '', articles }: IProps) {
   return (
     <article class={`${style.articles} ${className}`}>
-      {articles.map(({ data, url }) => (
+      {articles.map(({ data, url }, index) => (
         <div class={style.item}>
-          <ArticleTile article={data} url={url} />
+          <ArticleTile article={data} lazyLoad={index < 1 ? false : true} url={url} />
         </div>
       ))}
     </article>

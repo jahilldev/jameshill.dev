@@ -3011,11 +3011,6 @@ lodash.deburr@^4.1.0:
   resolved "https://registry.yarnpkg.com/lodash.deburr/-/lodash.deburr-4.1.0.tgz#ddb1bbb3ef07458c0177ba07de14422cb033ff9b"
   integrity sha1-3bG7s+8HRYwBd7oH3hRCLLAz/5s=
 
-lodash.escaperegexp@^4.0:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/lodash.escaperegexp/-/lodash.escaperegexp-4.1.2.tgz#64762c48618082518ac3df4ccf5d5886dae20347"
-  integrity sha1-ZHYsSGGAglGKw99Mz11YhtriA0c=
-
 lodash.get@^4.0:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
@@ -4687,15 +4682,14 @@ watchpack@^2.3.1:
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.1.2"
 
-webpack-assets-manifest@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/webpack-assets-manifest/-/webpack-assets-manifest-5.0.1.tgz#5f2b45579e87f122dc9af714f9508c462383a722"
-  integrity sha512-4Hpv0eP1yL06cvERpwxZ+N0Pmns5j/WtiaKZeoNsFUFZB52F6wPycCyxhdyfFKMxdwC/+xeTTlBffY62I3kh2Q==
+webpack-assets-manifest@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/webpack-assets-manifest/-/webpack-assets-manifest-5.1.0.tgz#5af328f6c8fa760cb9a62af631a83da2b478b791"
+  integrity sha512-kPuTMEjBrqZQVJ5M6yXNBCEdFbQQn7p+loNXt8NOeDFaAbsNFWqqwR0YL1mfG5LbwhK5FLXWXpuK3GuIIZ46rg==
   dependencies:
     chalk "^4.0"
     deepmerge "^4.0"
     lockfile "^1.0"
-    lodash.escaperegexp "^4.0"
     lodash.get "^4.0"
     lodash.has "^4.0"
     schema-utils "^3.0"

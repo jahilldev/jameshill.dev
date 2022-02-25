@@ -10,7 +10,7 @@ article: true
 layout: article.11ty.js
 ---
 
-> TL/DR: The package <a href="https://github.com/jahilldev/preactement" target="_blank" rel="noopener">preactement</a> allows you to easily wrap any Preact component in a custom element. It provides both synchronous, and asynchronous rendering.
+> TL/DR: The package <a href="https://github.com/jahilldev/component-elements/tree/main/packages/preactement#readme" target="_blank" rel="noopener">preactement</a> allows you to easily wrap any Preact component in a custom element. It provides both synchronous, and asynchronous rendering. <a href="https://github.com/jahilldev/component-elements/tree/main/packages/reactement#readme" target="_blank" rel="noopener">React</a> version of this library is also available.
 
 Preact is a fantastic fit for bringing the power of a virtual DOM, and JSX, to existing projects. For one, it's small and light, enough not to exacerbate any pre-existing issues from other frameworks that might be in use. It's also API compatible with React, so you get access to the powerful ecosystem of third party components that exist today.
 

@@ -53,7 +53,7 @@ function Html({ title = 'James', summary, image, inlineCss, jsPath, children }: 
         <meta name="twitter:site" content="@jahilldev" />
         <meta name="twitter:title" content={title} />
         {summary && <meta name="twitter:description" content={summary} />}
-        {image && <meta name="twitter:image:src" content={image} />}
+        {image && <meta name="twitter:image" content={image} />}
         {getFontLink()}
         {jsPath && (
           <Fragment>

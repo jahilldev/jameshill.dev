@@ -27,7 +27,10 @@ function ArticleTile({ lazyLoad, article, url, className = '' }: IProps) {
     <section class={`${style.tile} ${className}`}>
       <a href={url} class={style.image}>
         <picture>
-          <source media="(min-width: 35.5em)" srcset={`/${article.thumbImage}`} />
+          <source
+            media="(min-width: 35.5em)"
+            srcset={`/articles/_images/${article.thumbImage}`}
+          />
           <source media="(min-width: 0em)" srcset={EMPTY_IMAGE} />
           <img
             class="tile-uber-callout-image"

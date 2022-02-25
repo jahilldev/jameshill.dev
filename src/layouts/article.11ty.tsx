@@ -65,7 +65,7 @@ function Page(
     <Html
       title={`${title} - ${siteMeta.pageTitle}`}
       summary={excerpt}
-      image={`/articles/_images/${thumbImage}`}
+      image={`articles/_images/${thumbImage}`}
       inlineCss={inlineCss}
       jsPath={jsPath}
     >

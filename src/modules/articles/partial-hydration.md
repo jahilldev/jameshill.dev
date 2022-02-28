@@ -70,7 +70,7 @@ Following the single entry pattern shown above, we must run both of these compon
 
 ## How do we fix this?
 
-Well, first we need to some how isolate the components we know need hydration. One way to approach this is by applying a high order component (HOC) to the section in question. This gives you a point of control to hydrate your component, access any properties that the server has provided, and finally, render within a root element. The HOC could look something like this:
+Well, first we need to some how isolate the components we know need hydration. One way to approach this is by applying a higher order component (HOC) to the section in question. This gives you a point of control to hydrate your component, access any properties that the server has provided, and finally, render within a root element. The HOC could look something like this:
 
 ```typescript
 import { h, hydrate, ComponentFactory } from 'preact';

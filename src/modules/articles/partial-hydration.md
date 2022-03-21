@@ -10,13 +10,13 @@ article: true
 layout: article.11ty.js
 ---
 
-> TL/DR: The package <a href="https://github.com/jahilldev/component-elements/tree/main/packages/preactement#readme" target="_blank" rel="noopener">preactement</a> allows you to easily wrap any Preact component in a hydration wrapper, using Custom Elements.
-
 Today, there's an increasing emphasis on performance, and quite right too. Ensuring you only ship code that is absolutely essential for the initial render should be at the forefront of every front-end developers mind.
 
 The days of shoving everything into a `vendor.js` file and calling it a day are long gone. DevRels and others across the internet are promoting an open and accessible web, where regardless of how powerful your device may be, an app performs as best it can.
 
 This article focuses on Preact, but is in no way exclusive to this library. In particular, we'll look at pre-rendered applications, be it server side or statically generated.
+
+> TL/DR: The package <a href="https://github.com/jahilldev/component-elements/tree/main/packages/preactement#readme" target="_blank" rel="noopener">preactement</a> allows you to easily wrap any Preact component in a hydration wrapper, using Custom Elements.
 
 ## What to hydrate, where
 

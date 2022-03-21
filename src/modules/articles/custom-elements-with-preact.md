@@ -10,8 +10,6 @@ article: true
 layout: article.11ty.js
 ---
 
-> TL/DR: The package <a href="https://github.com/jahilldev/component-elements/tree/main/packages/preactement#readme" target="_blank" rel="noopener">preactement</a> allows you to easily wrap any Preact component in a custom element. It provides both synchronous, and asynchronous rendering. <a href="https://github.com/jahilldev/component-elements/tree/main/packages/reactement#readme" target="_blank" rel="noopener">React</a> version of this library is also available.
-
 Preact is a fantastic fit for bringing the power of a virtual DOM, and JSX, to existing projects. For one, it's small and light, enough not to exacerbate any pre-existing issues from other frameworks that might be in use. It's also API compatible with React, so you get access to the powerful ecosystem of third party components that exist today.
 
 However, for non trivial uses, manually triggering the render of your components within an existing code base can become messy.
@@ -28,6 +26,8 @@ $('.menu').click(() => {
 ```
 
 That works, but we're getting into a pretty muddy world that will only grow in complexity as time goes on. What we really need, is some way to make use of Preact in an isolated, well organised way. Here enters _Web Components_, or more accurately, <a href="https://developers.google.com/web/fundamentals/web-components/customelements" target="_blank" rel="noopener">HTML Custom Elements</a>
+
+> TL/DR: The package <a href="https://github.com/jahilldev/component-elements/tree/main/packages/preactement#readme" target="_blank" rel="noopener">preactement</a> allows you to easily wrap any Preact component in a custom element. It provides both synchronous, and asynchronous rendering. <a href="https://github.com/jahilldev/component-elements/tree/main/packages/reactement#readme" target="_blank" rel="noopener">React</a> version of this library is also available.
 
 ## Anatomy of the DOM
 

@@ -33,7 +33,7 @@ function ArticleList({ className = '', articles }: IProps) {
     <article class={`${style.articles} ${className}`}>
       {articles.map(({ data, url }, index) => (
         <div class={style.item}>
-          <ArticleTile article={data} lazyLoad={index < 1 ? false : true} url={url} />
+          <ArticleTile article={data} lazyLoad={index < 2 ? false : true} url={url} />
         </div>
       ))}
     </article>

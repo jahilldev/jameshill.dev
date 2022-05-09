@@ -117,7 +117,7 @@ function getSessionCount(key = '_gasct') {
  *
  * -------------------------------- */
 
-function getEventMeta(type = 'page_view') {
+function getEventMeta({ type, event }: Pick<IProps, 'type' | 'event'>) {
   const searchString = document.location.search;
   const searchParams = new URLSearchParams(searchString);
 
@@ -128,7 +128,14 @@ function getEventMeta(type = 'page_view') {
   const eventId = searchResults ? 'view_search_results' : type;
   const searchTerm = searchTerms.find((term) => searchParams.get(term));
 
-  return { en: eventId, 'ep.search_term': searchTerm };
+  return {
+    en: eventId,
+    'ep.search_term': searchTerm,
+    ec: event?.category || void 0,
+    ea: event?.action || void 0,
+    el: event?.label || void 0,
+    ev: event?.value || void 0,
+  };
 }
 
 /* -----------------------------------
@@ -202,12 +209,8 @@ function getQueryParams({ type, event, debug, error }: IProps) {
     seg: '1',
     _ss: sessionStart,
     _dbg: debug ? '1' : void 0,
-    ec: event?.category || void 0,
-    ea: event?.action || void 0,
-    el: event?.label || void 0,
-    ev: event?.value || void 0,
     exd: error?.message || void 0,
-    ...getEventMeta(type),
+    ...getEventMeta({ type, event }),
     ...getDocumentMeta(),
     ...getDeviceMeta(),
   };

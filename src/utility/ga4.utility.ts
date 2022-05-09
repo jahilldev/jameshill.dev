@@ -120,7 +120,8 @@ function getSessionCount(key = '_gasct') {
 function getEventMeta(type = 'page_view') {
   const searchString = document.location.search;
   const searchParams = new URLSearchParams(searchString);
-  const searchResults = searchTerms.some(term => searchString.includes(`&${term}=`) || searchString.includes(`?${term}=`));
+
+  const searchResults = searchTerms.some(term => new RegExp(`[\?|&]${term}=`, 'g').test(searchString));
   const eventId = searchResults ? 'view_search_results' : type;
   const searchTerm = searchTerms.find(term => searchParams.get(term));
 
@@ -222,7 +223,7 @@ function getQueryParams({ type, event, debug, error }: IProps) {
  * -------------------------------- */
 
 function track({ type = 'page_view', event, debug, error }: IProps = {}) {
-  if (__DEV__) {
+  if (__DEV__ && !debug) {
     return; // no-op
   }
 

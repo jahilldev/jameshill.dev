@@ -83,7 +83,7 @@ function getSessionId(key = sessionKey) {
   const sessionId = `${Math.floor(Math.random() * 1000000000) + 1}`;
   const storedValue = sessionStorage.getItem(key);
 
-  if(!storedValue) {
+  if (!storedValue) {
     sessionStorage.setItem(key, sessionId);
 
     return sessionId;
@@ -102,7 +102,7 @@ function getSessionCount(key = '_gasct') {
   let sessionCount = '1';
   const storedValue = sessionStorage.getItem(key);
 
-  if(storedValue) {
+  if (storedValue) {
     sessionCount = `${+storedValue + 1}`;
   }
 
@@ -121,9 +121,12 @@ function getEventMeta(type = 'page_view') {
   const searchString = document.location.search;
   const searchParams = new URLSearchParams(searchString);
 
-  const searchResults = searchTerms.some(term => new RegExp(`[\?|&]${term}=`, 'g').test(searchString));
+  const searchResults = searchTerms.some((term) =>
+    new RegExp(`[\?|&]${term}=`, 'g').test(searchString)
+  );
+
   const eventId = searchResults ? 'view_search_results' : type;
-  const searchTerm = searchTerms.find(term => searchParams.get(term));
+  const searchTerm = searchTerms.find((term) => searchParams.get(term));
 
   return { en: eventId, 'ep.search_term': searchTerm };
 }
@@ -227,9 +230,8 @@ function track({ type = 'page_view', event, debug, error }: IProps = {}) {
     return; // no-op
   }
 
-
   const queryParams = getQueryParams({ type, event, debug, error });
-  const queryString = new URLSearchParams(queryParams).toString()
+  const queryString = new URLSearchParams(queryParams).toString();
 
   navigator.sendBeacon(`${analyticsEndpoint}?${queryString}`);
 }

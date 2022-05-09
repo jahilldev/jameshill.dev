@@ -1,6 +1,5 @@
 {
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.tabSize": 2,
   "editor.semanticHighlighting.enabled": false,
   "editor.codeActionsOnSave": {
@@ -8,4 +7,5 @@
   },
   "prettier.requireConfig": true,
   "eslint.format.enable": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
 }

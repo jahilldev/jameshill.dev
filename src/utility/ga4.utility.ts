@@ -190,7 +190,7 @@ function getQueryParams({ type, event, debug, error }: IProps) {
     v: '2', // v2 for GA4
     tid: trackingId,
     _p: getSessionId('_gapid'),
-    ul: (navigator.language || void 0).toLowerCase(),
+    ul: (navigator.language || '').toLowerCase() || void 0,
     cid: getClientId(),
     _fv: firstVisit,
     _s: '1',
@@ -198,7 +198,7 @@ function getQueryParams({ type, event, debug, error }: IProps) {
     sct: getSessionCount(),
     seg: '1',
     _ss: sessionStart,
-    _dbg: debug ? '1' : undefined,
+    _dbg: debug ? '1' : void 0,
     ec: event?.category || void 0,
     ea: event?.action || void 0,
     el: event?.label || void 0,

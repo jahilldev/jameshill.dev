@@ -44,6 +44,46 @@ const options = {
 
 /* -----------------------------------
  *
+ * Scroll
+ *
+ * -------------------------------- */
+
+const scrollEvent = debounce(() => {
+  const body = document.body;
+  const scrollTop = window.pageYOffset || body.scrollTop;
+  const { scrollHeight, offsetHeight, clientHeight } = document.documentElement;
+
+  const documentHeight = Math.max(
+    body.scrollHeight,
+    scrollHeight,
+    body.offsetHeight,
+    offsetHeight,
+    body.clientHeight,
+    clientHeight
+  );
+
+  const trackLength = documentHeight - window.innerHeight;
+  const percentage = Math.floor((scrollTop / trackLength) * 100);
+
+  if (percentage < 90) {
+    return;
+  }
+
+  track({ type: 'scroll', event: { 'epn.percent_scrolled': 90 } });
+
+  document.removeEventListener('scroll', scrollEvent);
+});
+
+/* -----------------------------------
+ *
+ * Scroll
+ *
+ * -------------------------------- */
+
+document.addEventListener('scroll', scrollEvent);
+
+/* -----------------------------------
+ *
  * ClientId
  *
  * -------------------------------- */
@@ -209,38 +249,6 @@ function getQueryParams({ type, event, debug, error }: IProps) {
 
 /* -----------------------------------
  *
- * Scroll
- *
- * -------------------------------- */
-
-const scrollEvent = debounce(() => {
-  const body = document.body;
-  const scrollTop = window.pageYOffset || body.scrollTop;
-  const documentElement = document.documentElement;
-
-  const documentHeight = Math.max(
-    body.scrollHeight,
-    documentElement.scrollHeight,
-    body.offsetHeight,
-    documentElement.offsetHeight,
-    body.clientHeight,
-    documentElement.clientHeight
-  );
-
-  const trackLength = documentHeight - window.innerHeight;
-  const percentage = Math.floor((scrollTop / trackLength) * 100);
-
-  if (percentage < 90) {
-    return;
-  }
-
-  track({ type: 'scroll', event: { 'epn.percent_scrolled': 90 } });
-
-  document.removeEventListener('scroll', scrollEvent);
-});
-
-/* -----------------------------------
- *
  * Debounce
  *
  * -------------------------------- */
@@ -268,14 +276,6 @@ function track({ type = 'page_view', event, debug = debugActive, error }: IProps
 
   navigator.sendBeacon(`${analyticsEndpoint}?${queryString}`);
 }
-
-/* -----------------------------------
- *
- * Scroll
- *
- * -------------------------------- */
-
-document.addEventListener('scroll', scrollEvent);
 
 /* -----------------------------------
  *

@@ -23,6 +23,9 @@ function MainIntro() {
           </i>
           coupons
         </p>
+        <p class={style.text}>
+          <em>Performance and technology advocate</em>
+        </p>
         <a
           href="https://www.linkedin.com/in/jameshill-dev"
           target="_blank"

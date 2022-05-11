@@ -131,10 +131,10 @@ function getEventMeta({ type, event }: Pick<IProps, 'type' | 'event'>) {
   return {
     en: eventId,
     'ep.search_term': searchTerm,
-    ec: event?.category || void 0,
-    ea: event?.action || void 0,
-    el: event?.label || void 0,
-    ev: event?.value || void 0,
+    ec: event?.category,
+    ea: event?.action,
+    el: event?.label,
+    ev: event?.value,
   };
 }
 

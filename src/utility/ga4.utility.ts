@@ -23,6 +23,7 @@ interface IProps {
 const debugActive = false;
 const clientKey = '_gacid';
 const sessionKey = '_gasid';
+const counterKey = '_gasct';
 const trackingId = 'G-HWD0EHM8LC';
 const analyticsEndpoint = 'https://www.google-analytics.com/g/collect';
 const firstVisit = !localStorage.getItem(clientKey) ? '1' : void 0;
@@ -126,7 +127,7 @@ function getSessionId(key = sessionKey) {
  *
  * -------------------------------- */
 
-function getSessionCount(key = '_gasct') {
+function getSessionCount(key = counterKey) {
   let sessionCount = '1';
   const storedValue = sessionStorage.getItem(key);
 

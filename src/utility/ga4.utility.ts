@@ -6,7 +6,7 @@
 
 interface IProps {
   type?: string;
-  event?: IEvent;
+  event?: Record<string, string | number>;
   debug?: boolean;
   error?: {
     message: string;
@@ -16,23 +16,11 @@ interface IProps {
 
 /* -----------------------------------
  *
- * IEvent
- *
- * -------------------------------- */
-
-interface IEvent {
-  category: string;
-  action: string;
-  label: string;
-  value: string;
-}
-
-/* -----------------------------------
- *
  * Variables
  *
  * -------------------------------- */
 
+const debugActive = false;
 const clientKey = '_gacid';
 const sessionKey = '_gasid';
 const trackingId = 'G-HWD0EHM8LC';
@@ -131,10 +119,7 @@ function getEventMeta({ type, event }: Pick<IProps, 'type' | 'event'>) {
   return {
     en: eventId,
     'ep.search_term': searchTerm,
-    ec: event?.category,
-    ea: event?.action,
-    el: event?.label,
-    ev: event?.value,
+    ...(event && { ...event }),
   };
 }
 
@@ -224,11 +209,56 @@ function getQueryParams({ type, event, debug, error }: IProps) {
 
 /* -----------------------------------
  *
+ * Scroll
+ *
+ * -------------------------------- */
+
+const scrollEvent = debounce(() => {
+  const body = document.body;
+  const scrollTop = window.pageYOffset || body.scrollTop;
+  const documentElement = document.documentElement;
+
+  const documentHeight = Math.max(
+    body.scrollHeight,
+    documentElement.scrollHeight,
+    body.offsetHeight,
+    documentElement.offsetHeight,
+    body.clientHeight,
+    documentElement.clientHeight
+  );
+
+  const trackLength = documentHeight - window.innerHeight;
+  const percentage = Math.floor((scrollTop / trackLength) * 100);
+
+  if (percentage < 90) {
+    return;
+  }
+
+  track({ type: 'scroll', event: { 'epn.percent_scrolled': 90 } });
+
+  document.removeEventListener('scroll', scrollEvent);
+});
+
+/* -----------------------------------
+ *
+ * Debounce
+ *
+ * -------------------------------- */
+
+function debounce(callback, frequency = 250, timer = null) {
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(callback, frequency, ...args);
+  };
+}
+
+/* -----------------------------------
+ *
  * Track
  *
  * -------------------------------- */
 
-function track({ type = 'page_view', event, debug, error }: IProps = {}) {
+function track({ type = 'page_view', event, debug = debugActive, error }: IProps = {}) {
   if (__DEV__ && !debug) {
     return; // no-op
   }
@@ -241,13 +271,11 @@ function track({ type = 'page_view', event, debug, error }: IProps = {}) {
 
 /* -----------------------------------
  *
- * Event
+ * Scroll
  *
  * -------------------------------- */
 
-function event(event: IEvent) {
-  track({ type: 'event', event });
-}
+document.addEventListener('scroll', scrollEvent);
 
 /* -----------------------------------
  *
@@ -265,4 +293,4 @@ function error(message: string, fatal: boolean) {
  *
  * -------------------------------- */
 
-export { track, event, error };
+export { track, error };

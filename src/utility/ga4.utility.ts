@@ -254,11 +254,10 @@ function getQueryParams({ type, event, debug, error }: IProps) {
  *
  * -------------------------------- */
 
-function debounce(callback, frequency = 250, timer = null) {
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(callback, frequency, ...args);
-  };
+function debounce(callback: TimerHandler, frequency = 500, timer = 0) {
+  return (...args) => (
+    clearTimeout(timer), (timer = setTimeout(callback, frequency, ...args))
+  );
 }
 
 /* -----------------------------------

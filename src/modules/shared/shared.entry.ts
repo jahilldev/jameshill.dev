@@ -1,4 +1,12 @@
-import { track } from '@/utility/ga4.utility';
+import { track } from '@minimal-analytics/ga4';
+
+/* -----------------------------------
+ *
+ * Globals
+ *
+ * -------------------------------- */
+
+window.gaTrackingId = 'G-HWD0EHM8LC';
 
 /* -----------------------------------
  *
@@ -6,4 +14,6 @@ import { track } from '@/utility/ga4.utility';
  *
  * -------------------------------- */
 
-track();
+if (!__DEV__) {
+  track();
+}

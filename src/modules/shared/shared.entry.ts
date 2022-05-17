@@ -6,7 +6,9 @@ import { track } from '@minimal-analytics/ga4';
  *
  * -------------------------------- */
 
-window.gaTrackingId = 'G-HWD0EHM8LC';
+window.minimalAnalytics = {
+  trackingId: 'G-HWD0EHM8LC',
+};
 
 /* -----------------------------------
  *

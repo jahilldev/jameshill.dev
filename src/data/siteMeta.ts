@@ -6,6 +6,7 @@
 
 const pageTitle = 'James Hill';
 const metaDescription = 'Tech Lead for all things front-end at Groupon coupons';
+const siteDomain = 'https://jameshill.dev';
 
 /* -----------------------------------
  *
@@ -13,4 +14,4 @@ const metaDescription = 'Tech Lead for all things front-end at Groupon coupons';
  *
  * -------------------------------- */
 
-export { pageTitle, metaDescription };
+export { pageTitle, metaDescription, siteDomain };

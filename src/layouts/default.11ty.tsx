@@ -48,7 +48,7 @@ function Page(
   const pageCss = this.getAssetContents(['layouts/default.11ty.css', cssPath]);
 
   return (
-    <Html title={pageTitle} inlineCss={pageCss} jsPath={jsPath}>
+    <Html siteMeta={siteMeta} pageTitle={pageTitle} inlineCss={pageCss} jsPath={jsPath}>
       <div class={style.wrapper}>
         <Header menuLinks={menuLinks} />
         {content}

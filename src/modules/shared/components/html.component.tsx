@@ -1,5 +1,6 @@
 /* eslint-disable react/no-danger */
 import { h, Fragment } from 'preact';
+import { IData } from '@/modules/shared/model/page.model';
 import style from './html.module.scss';
 
 /* -----------------------------------
@@ -9,7 +10,8 @@ import style from './html.module.scss';
  * -------------------------------- */
 
 interface IProps {
-  title?: string;
+  siteMeta?: IData['siteMeta'];
+  pageTitle?: string;
   summary?: string;
   image?: string;
   inlineCss?: string;
@@ -31,16 +33,30 @@ import favicon from '@/styles/images/favicon.png';
  *
  * -------------------------------- */
 
-function Html({ title = 'James', summary, image, inlineCss, jsPath, children }: IProps) {
+function Html({
+  siteMeta: { siteDomain },
+  pageTitle,
+  summary,
+  image,
+  inlineCss,
+  jsPath,
+  children,
+}: IProps) {
   const scripts = ['vendor.js', 'shared/shared.entry.js', jsPath];
 
   return (
     <html lang="en" class={style.html}>
       <head>
         <meta charSet="utf-8" />
-        <title>{title}</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={summary} />
         <link rel="icon" type="image/png" href={favicon} />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          href={`${siteDomain}/feed.xml`}
+          title="Your title"
+        ></link>
         <meta
           name="viewport"
           content="width=device-width, height=device-height, initial-scale=1"
@@ -51,11 +67,9 @@ function Html({ title = 'James', summary, image, inlineCss, jsPath, children }: 
         />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@jahilldev" />
-        <meta name="twitter:title" content={title} />
+        <meta name="twitter:title" content={pageTitle} />
         {summary && <meta name="twitter:description" content={summary} />}
-        {image && (
-          <meta name="twitter:image" content={`https://www.jameshill.dev/${image}`} />
-        )}
+        {image && <meta name="twitter:image" content={`${siteDomain}/${image}`} />}
         {getFontLink()}
         {jsPath && (
           <Fragment>

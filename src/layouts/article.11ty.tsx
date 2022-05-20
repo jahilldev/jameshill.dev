@@ -63,7 +63,8 @@ function Page(
 
   return (
     <Html
-      title={`${title} - ${siteMeta.pageTitle}`}
+      siteMeta={siteMeta}
+      pageTitle={`${title} - ${siteMeta.pageTitle}`}
       summary={excerpt}
       image={`articles/_images/${thumbImage}`}
       inlineCss={inlineCss}

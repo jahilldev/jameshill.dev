@@ -55,7 +55,7 @@ function Html({
           rel="alternate"
           type="application/rss+xml"
           href={`${siteDomain}/feed.xml`}
-          title="Your title"
+          title="James Hill - XML Feed"
         ></link>
         <meta
           name="viewport"

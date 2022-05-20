@@ -56,7 +56,7 @@ function Html({
           type="application/rss+xml"
           href={`${siteDomain}/feed.xml`}
           title="James Hill - XML Feed"
-        ></link>
+        />
         <meta
           name="viewport"
           content="width=device-width, height=device-height, initial-scale=1"

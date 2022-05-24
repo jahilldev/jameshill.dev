@@ -79,7 +79,7 @@ function Html({
           </Fragment>
         )}
         {inlineCss && <style dangerouslySetInnerHTML={{ __html: inlineCss }} />}
-        {/* <script
+        <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `
@@ -91,7 +91,7 @@ function Html({
           heap.load("1110748807");
         `,
           }}
-        /> */}
+        />
       </head>
       <body class={style.body}>
         {children}

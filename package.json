@@ -21,7 +21,7 @@
     "node": ">=14"
   },
   "dependencies": {
-    "@minimal-analytics/heap": "^0.0.1",
+    "@minimal-analytics/heap": "^0.0.2",
     "classnames": "^2.3.1",
     "preact": "10.6.6",
     "preact-render-to-string": "5.1.20",

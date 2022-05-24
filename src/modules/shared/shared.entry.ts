@@ -1,4 +1,4 @@
-import { track } from '@minimal-analytics/ga4';
+import { track } from '@minimal-analytics/heap';
 
 /* -----------------------------------
  *
@@ -7,7 +7,7 @@ import { track } from '@minimal-analytics/ga4';
  * -------------------------------- */
 
 window.minimalAnalytics = {
-  trackingId: 'G-HWD0EHM8LC',
+  trackingId: '1110748807',
 };
 
 /* -----------------------------------
@@ -16,6 +16,4 @@ window.minimalAnalytics = {
  *
  * -------------------------------- */
 
-if (!__DEV__) {
-  track();
-}
+track();

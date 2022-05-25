@@ -18,7 +18,7 @@
   <title>{{ metaData.title }}</title>
   <subtitle>{{ metaData.subTitle }}</subtitle>
   <link href="{{siteMeta.siteDomain}}/{{ metaData.xmlFile }}" rel="self" />
-  <link href="{{ siteMeta.siteDomain }}" />
+  <link href="{{ siteMeta.siteDomain }}?utm_source=Feed&amp;utm_medium=RSS" />
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ siteMeta.siteDomain }}</id>
   <author>
@@ -30,7 +30,7 @@
   }}{% endset %}
   <entry>
     <title>{{ article.data.title }}</title>
-    <link href="{{ absolutePostUrl }}" />
+    <link href="{{ absolutePostUrl }}?utm_source=Feed&amp;utm_medium=RSS" />
     <updated>{{ article.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content>{{ article.data.excerpt | htmlToAbsoluteUrls(absolutePostUrl) }}</content>

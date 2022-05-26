@@ -18,7 +18,7 @@
     "test": "jest"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=16.4.3"
   },
   "dependencies": {
     "@minimal-analytics/ga4": "^1.4.3",

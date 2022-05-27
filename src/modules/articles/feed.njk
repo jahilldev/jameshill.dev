@@ -18,7 +18,7 @@
   <title>{{ metaData.title }}</title>
   <subtitle>{{ metaData.subTitle }}</subtitle>
   <link href="{{siteMeta.siteDomain}}/{{ metaData.xmlFile }}" rel="self" />
-  <link href="{{ siteMeta.siteDomain }}/?utm_source=feed.xml&amp;utm_medium=referral&amp;utm_campaign=rss" />
+  <link href="{{ siteMeta.siteDomain }}/?utm_source=feed.xml&amp;utm_medium=rss&amp;utm_campaign=rss" />
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ siteMeta.siteDomain }}</id>
   <author>
@@ -30,14 +30,14 @@
   }}{% endset %}
   <entry>
     <title>{{ article.data.title }}</title>
-    <link href="{{ absolutePostUrl }}?utm_source=feed.xml&amp;utm_medium=referral&amp;utm_campaign=rss" />
+    <link href="{{ absolutePostUrl }}?utm_source=feed.xml&amp;utm_medium=rss&amp;utm_campaign=rss" />
     <updated>{{ article.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content>{{ article.data.excerpt | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
     <image>
       <url>{{ siteMeta.siteDomain }}/{{ metaData.imagePath }}/{{ article.data.thumbImage }}</url>
       <title>{{ article.data.tagLine }}</title>
-      <link>{{ absolutePostUrl }}?utm_source=feed.xml&amp;utm_medium=referral&amp;utm_campaign=rss</link>
+      <link>{{ absolutePostUrl }}?utm_source=feed.xml&amp;utm_medium=rss&amp;utm_campaign=rss</link>
     </image>
   </entry>
   {%- endfor %}

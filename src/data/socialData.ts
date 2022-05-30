@@ -1,10 +1,10 @@
 /* -----------------------------------
  *
- * Links
+ * IMenuItem
  *
  * -------------------------------- */
 
-interface ILink {
+interface IMenuItem {
   imageSrc: string;
   href: string;
   altText: string;
@@ -20,19 +20,6 @@ interface ILink {
 import twitterIcon from '@/styles/images/twitter-icon.svg';
 import githubIcon from '@/styles/images/github-icon.svg';
 import linkedinIcon from '@/styles/images/linkedin-icon.svg';
-
-/* -----------------------------------
- *
- * IMenuItem
- *
- * -------------------------------- */
-
-interface IMenuItem {
-  imageSrc: string;
-  href: string;
-  altText: string;
-  attributes?: object;
-}
 
 /* -----------------------------------
  *

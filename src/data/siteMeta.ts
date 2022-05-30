@@ -4,7 +4,7 @@
  *
  * -------------------------------- */
 
-const pageTitle = 'James Hill';
+const pageTitle = 'James Hill - Performance & Technology advocate';
 const metaDescription = 'Tech Lead for all things front-end at Groupon coupons';
 const siteDomain = 'https://jameshill.dev';
 

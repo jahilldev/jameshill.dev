@@ -47,7 +47,7 @@ function Page(
   {
     siteMeta,
     mainMenu: { menuLinks },
-    socialMenu: { socialLinks },
+    socialData: { socialMenu },
     title,
     excerpt,
     thumbImage,
@@ -64,8 +64,8 @@ function Page(
   return (
     <Html
       siteMeta={siteMeta}
-      pageTitle={`${title} - ${siteMeta.pageTitle}`}
-      summary={excerpt}
+      pageTitle={`${title} - ${siteMeta.authorName}`}
+      summaryText={excerpt}
       image={`articles/_images/${thumbImage}`}
       inlineCss={inlineCss}
       jsPath={jsPath}
@@ -98,7 +98,7 @@ function Page(
             </div>
           </div>
         </main>
-        <Footer socialLinks={socialLinks} />
+        <Footer socialMenu={socialMenu} />
       </div>
     </Html>
   );

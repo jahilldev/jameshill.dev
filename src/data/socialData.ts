@@ -23,25 +23,48 @@ import linkedinIcon from '@/styles/images/linkedin-icon.svg';
 
 /* -----------------------------------
  *
+ * IMenuItem
+ *
+ * -------------------------------- */
+
+interface IMenuItem {
+  imageSrc: string;
+  href: string;
+  altText: string;
+  attributes?: object;
+}
+
+/* -----------------------------------
+ *
  * Links
  *
  * -------------------------------- */
 
-const socialLinks: ILink[] = [
+const twitterUrl = 'https://twitter.com/jahilldev';
+const githubUrl = 'https://github.com/jahilldev';
+const linkedinUrl = 'https://www.linkedin.com/in/jameshill-dev/';
+
+/* -----------------------------------
+ *
+ * Menu
+ *
+ * -------------------------------- */
+
+const socialMenu: IMenuItem[] = [
   {
     imageSrc: twitterIcon,
-    href: 'https://twitter.com/jahilldev',
-    altText: 'Twitter'
+    href: twitterUrl,
+    altText: 'Twitter',
   },
   {
     imageSrc: githubIcon,
-    href: 'https://github.com/jahilldev',
-    altText: 'Github'
+    href: githubUrl,
+    altText: 'Github',
   },
   {
     imageSrc: linkedinIcon,
-    href: 'https://www.linkedin.com/in/jameshill-dev',
-    altText: 'LinkedIn'
+    href: linkedinUrl,
+    altText: 'LinkedIn',
   },
 ];
 
@@ -51,4 +74,13 @@ const socialLinks: ILink[] = [
  *
  * -------------------------------- */
 
-export { ILink, socialLinks };
+export {
+  IMenuItem,
+  twitterIcon,
+  githubIcon,
+  linkedinIcon,
+  twitterUrl,
+  githubUrl,
+  linkedinUrl,
+  socialMenu,
+};

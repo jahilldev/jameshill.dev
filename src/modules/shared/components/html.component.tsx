@@ -12,7 +12,7 @@ import style from './html.module.scss';
 interface IProps {
   siteMeta?: IData['siteMeta'];
   pageTitle?: string;
-  summary?: string;
+  summaryText?: string;
   image?: string;
   inlineCss?: string;
   jsPath?: string;
@@ -34,9 +34,9 @@ import favicon from '@/styles/images/favicon.png';
  * -------------------------------- */
 
 function Html({
-  siteMeta: { siteDomain },
+  siteMeta: { siteDomain, metaDescription },
   pageTitle,
-  summary,
+  summaryText = metaDescription,
   image,
   inlineCss,
   jsPath,
@@ -49,7 +49,7 @@ function Html({
       <head>
         <meta charSet="utf-8" />
         <title>{pageTitle}</title>
-        <meta name="description" content={summary} />
+        <meta name="description" content={summaryText} />
         <link rel="icon" type="image/png" href={favicon} />
         <link
           rel="alternate"
@@ -68,7 +68,7 @@ function Html({
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@jahilldev" />
         <meta name="twitter:title" content={pageTitle} />
-        {summary && <meta name="twitter:description" content={summary} />}
+        {summaryText && <meta name="twitter:description" content={summaryText} />}
         {image && <meta name="twitter:image" content={`${siteDomain}/${image}`} />}
         {getFontLink()}
         {jsPath && (

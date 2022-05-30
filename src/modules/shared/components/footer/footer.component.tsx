@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { ILink } from '@/data/socialMenu';
+import { IMenuItem } from '@/data/socialData';
 import style from './footer.module.scss';
 
 /* -----------------------------------
@@ -9,7 +9,7 @@ import style from './footer.module.scss';
  * -------------------------------- */
 
 interface IProps {
-  socialLinks: ILink[];
+  socialMenu: IMenuItem[];
 }
 
 /* -----------------------------------
@@ -26,10 +26,10 @@ import { SocialMenu } from '@/modules/shared/components/socialMenu';
  *
  * -------------------------------- */
 
-function Footer({ socialLinks }: IProps) {
+function Footer({ socialMenu }: IProps) {
   return (
     <footer class={style.footer}>
-      <SocialMenu className={style.social} socialLinks={socialLinks} />
+      <SocialMenu className={style.social} socialMenu={socialMenu} />
     </footer>
   );
 }

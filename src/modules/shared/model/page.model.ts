@@ -1,6 +1,6 @@
 import * as siteMeta from '@/data/siteMeta';
 import * as mainMenu from '@/data/mainMenu';
-import * as socialMenu from '@/data/socialMenu';
+import * as socialData from '@/data/socialData';
 
 /* -----------------------------------
  *
@@ -26,7 +26,7 @@ interface IPage {
 interface IData {
   siteMeta: typeof siteMeta;
   mainMenu: typeof mainMenu;
-  socialMenu: typeof socialMenu;
+  socialData: typeof socialData;
   pagination?: IPagination;
 }
 
@@ -54,20 +54,20 @@ interface IPagination {
     next: string[];
     first: string[];
     last: string[];
-  },
+  };
   links: string[];
   pageLinks: string[];
   previousPageHref: string;
-  nextPageHref: string,
+  nextPageHref: string;
   firstPageHref: string;
   lastPageHref: string;
-  hrefs: string[],
+  hrefs: string[];
   href: {
     previous: string;
     next: string;
     first: string;
     last: string;
-  }
+  };
 }
 
 /* -----------------------------------

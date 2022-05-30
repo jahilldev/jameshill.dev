@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import { ILink } from '@/data/socialMenu';
+import { IMenuItem } from '@/data/socialData';
 import style from './socialMenu.module.scss';
 
 /* -----------------------------------
@@ -10,7 +10,7 @@ import style from './socialMenu.module.scss';
 
 interface IProps {
   className?: string;
-  socialLinks: ILink[];
+  socialMenu: IMenuItem[];
 }
 
 /* -----------------------------------
@@ -19,10 +19,10 @@ interface IProps {
  *
  * -------------------------------- */
 
-function SocialMenu({ className = '', socialLinks }: IProps) {
+function SocialMenu({ className = '', socialMenu }: IProps) {
   return (
     <nav class={`${style.social} ${className}`}>
-      {socialLinks.map(({ href, imageSrc, attributes = {} }) => (
+      {socialMenu.map(({ href, imageSrc, attributes = {} }) => (
         <a href={href} target="_blank" rel="noreferrer" class={style.link} {...attributes}>
           <img src={imageSrc} class={style.icon} width="26" height="26" alt="Twitter" />
         </a>

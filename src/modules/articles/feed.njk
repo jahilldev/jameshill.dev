@@ -3,27 +3,22 @@
   "permalink": "feed.xml",
   "eleventyExcludeFromCollections": true,
   "metaData": {
-    "title": "James Hill - Performance & Technology advocate",
-    "subTitle": "The House of James. Sporadic articles on tech & performance",
     "xmlFile": "feed.xml",
-    "imagePath": "articles/_images",
-    "author": {
-      "name": "James Hill"
-    }
+    "imagePath": "articles/_images"
   }
 }
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ metaData.title }}</title>
-  <subtitle>{{ metaData.subTitle }}</subtitle>
+  <title>{{ siteMeta.pageTitle }}</title>
+  <subtitle>{{ siteMeta.metaDescription }}</subtitle>
   <link href="{{siteMeta.siteDomain}}/{{ metaData.xmlFile }}" rel="self" />
   <link href="{{ siteMeta.siteDomain }}/?utm_source=feed.xml&amp;utm_medium=referral&amp;utm_campaign=rss" />
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ siteMeta.siteDomain }}</id>
   <author>
-    <name>{{ metaData.author.name }}</name>
-    <email>{{ metaData.author.email }}</email>
+    <name>{{ siteMeta.authorName }}</name>
+    <github>{{ socialDetails.githubUrl }}</github>
   </author>
   {%- for article in collections.articles %} 
     {% set absolutePostUrl %}{{ article.url | url | absoluteUrl(siteMeta.siteDomain)

@@ -37,7 +37,7 @@ function Page(
   {
     siteMeta,
     mainMenu: { menuLinks },
-    socialMenu: { socialLinks },
+    socialData: { socialMenu },
     title = '',
     content,
     cssPath,
@@ -52,7 +52,7 @@ function Page(
       <div class={style.wrapper}>
         <Header menuLinks={menuLinks} />
         {content}
-        <Footer socialLinks={socialLinks} />
+        <Footer socialMenu={socialMenu} />
       </div>
     </Html>
   );

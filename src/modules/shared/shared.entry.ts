@@ -16,6 +16,6 @@ window.minimalAnalytics = {
  *
  * -------------------------------- */
 
-// if (!__DEV__) {
-track();
-// }
+if (!__DEV__) {
+  track();
+}

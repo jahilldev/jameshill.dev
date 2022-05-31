@@ -44,7 +44,7 @@ function Page(
     jsPath,
   }: IProps
 ) {
-  const pageTitle = [title, siteMeta.pageTitle].filter((item) => !!item).join(' - ');
+  const pageTitle = [title, siteMeta.pageTitle].filter((item) => !!item).join(' :: ');
   const pageCss = this.getAssetContents(['layouts/default.11ty.css', cssPath]);
 
   return (

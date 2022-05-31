@@ -4,11 +4,10 @@
  *
  * -------------------------------- */
 
-const pageTitle = 'James Hill - Performance & Technology advocate';
-const metaDescription =
-  'The House of James. Sporadic articles on tech & performance. Tech Lead for all things front-end at Groupon Coupons';
-const siteDomain = 'https://jameshill.dev';
+const siteDomain = 'https://www.jameshill.dev';
 const authorName = 'James Hill';
+const pageTitle = `${authorName} - Performance & Technology advocate`;
+const metaDescription = 'Sporadic articles on tech & performance.';
 
 /* -----------------------------------
  *

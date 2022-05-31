@@ -3,6 +3,7 @@ const fs = require('fs');
 const { render } = require('preact-render-to-string');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginRssFeed = require('@11ty/eleventy-plugin-rss');
+const pluginTimeToRead = require('eleventy-plugin-time-to-read');
 const markdown = require('markdown-it');
 const markdownAnchor = require('markdown-it-anchor');
 
@@ -26,6 +27,7 @@ module.exports = function (config) {
 
   config.addPlugin(pluginSyntaxHighlight);
   config.addPlugin(pluginRssFeed);
+  config.addPlugin(pluginTimeToRead);
 
   config.addTransform('jsx', (content) => {
     if (isValidElement(content)) {

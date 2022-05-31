@@ -75,6 +75,7 @@ function Page(
         <main class={style.content}>
           <Banner bannerImage={bannerImage}>
             <h1>{title}</h1>
+            {/* <time>{this.timeToRead(content)}</time> */}
           </Banner>
           <div class={style.container}>
             <div class={style.layout}>

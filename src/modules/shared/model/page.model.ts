@@ -15,6 +15,9 @@ interface IPage {
   getPreviousCollectionItem: (page: string) => any;
   getNextCollectionItem: (page: string) => any;
   getAssetContents: (file: string[]) => string;
+
+  // plugins
+  timeToRead(text: string): string;
 }
 
 /* -----------------------------------

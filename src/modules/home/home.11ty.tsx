@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import { IPage, IData } from '../shared/model/page.model';
+import { strapLine } from '@/data/siteMeta';
 import style from './home.module.scss';
 
 /* -----------------------------------
@@ -43,6 +44,7 @@ function Page(this: IPage) {
 module.exports = {
   render: Page,
   data: () => ({
+    title: strapLine,
     permalink: 'index.html',
     layout: 'default.11ty.js',
     cssPath: 'home/home.11ty.css',

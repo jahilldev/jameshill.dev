@@ -6,7 +6,8 @@
 
 const siteDomain = 'https://www.jameshill.dev';
 const authorName = 'James Hill';
-const pageTitle = `${authorName} - Performance & Technology advocate`;
+const strapLine = 'Performance & Technology advocate';
+const pageTitle = `${authorName}`;
 const metaDescription = 'Sporadic articles on tech & performance.';
 
 /* -----------------------------------
@@ -15,4 +16,4 @@ const metaDescription = 'Sporadic articles on tech & performance.';
  *
  * -------------------------------- */
 
-export { pageTitle, metaDescription, siteDomain, authorName };
+export { siteDomain, authorName, strapLine, pageTitle, metaDescription };

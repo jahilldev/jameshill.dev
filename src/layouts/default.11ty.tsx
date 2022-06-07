@@ -1,4 +1,3 @@
-/* eslint-disable react/no-danger */
 import { h } from 'preact';
 import { IData, IPage } from '@/modules/shared/model/page.model';
 import style from './default.module.scss';

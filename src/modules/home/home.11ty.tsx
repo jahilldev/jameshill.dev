@@ -44,7 +44,7 @@ function Page(this: IPage) {
 module.exports = {
   render: Page,
   data: () => ({
-    title: strapLine,
+    title: 'Home',
     permalink: 'index.html',
     layout: 'default.11ty.js',
     cssPath: 'home/home.11ty.css',

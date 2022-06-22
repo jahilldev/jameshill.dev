@@ -365,10 +365,10 @@
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-4.1.6.tgz#991b4393404babaac27cbc406dd28763aa14cec4"
   integrity sha512-JbtcHGODAlkOT6eDV2rCyOguW3+o34ExMD9DOki6kxzeyN3IBtZ9PI0FlbKeD77Bm5U0UG5Heo4qnNbSajXUnw==
 
-"@minimal-analytics/ga4@^1.6.5":
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/@minimal-analytics/ga4/-/ga4-1.6.5.tgz#c75740d1cfe7d89397be0fb9a51d0d6ce3d023fc"
-  integrity sha512-XZxA3Tq3vsLKKpkvIs2L7TzM49mFr9xgsSQEc+EpfOswrSPRoz7w4ltD03IkK/585vX7BLiDK6VqtqGnBjNQ3A==
+"@minimal-analytics/ga4@^1.6.6":
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/@minimal-analytics/ga4/-/ga4-1.6.6.tgz#e2ab040c632c06fd0e3654a0027380597813d4a9"
+  integrity sha512-1QDKrAmjWq+0pXAVCNSINkc4DQoR+IXSQnQVJv9l3oK+sbzgCvnoTUUOYLOou3j36NOIDPesGV1ROTvj9oDHAw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"

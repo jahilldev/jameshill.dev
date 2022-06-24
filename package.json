@@ -21,7 +21,7 @@
     "node": ">=16.4.3"
   },
   "dependencies": {
-    "@minimal-analytics/ga4": "^1.7.2",
+    "@minimal-analytics/ga4": "^1.8.1",
     "classnames": "^2.3.1",
     "preact": "10.6.6",
     "preact-render-to-string": "5.1.20",

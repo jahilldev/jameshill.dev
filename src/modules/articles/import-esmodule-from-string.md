@@ -10,7 +10,7 @@ article: true
 layout: article.11ty.js
 ---
 
-Now I know what many of you will already be thinking; Why, and in what circumstances would this be a "good idea"? Well, it's not really. However, there are some situations where this might be useful, and the issues around security can be mitigated via full ownership. That being said, accepting code from a third-party and running it on your servers is a very, very bad idea. Don't do it unless you know what you're doing.
+Now I know what many of you will already be thinking; Why, and in what circumstances would this be a "good idea"? Well, it's not really. However, there are some situations where this might be useful, and the issues around security can be mitigated (partly) via code ownership. That being said, accepting code from a third-party and running it on your servers is a very, very bad idea. Don't do it unless you know what you're doing.
 
 ## On the server
 

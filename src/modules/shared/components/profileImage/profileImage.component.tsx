@@ -33,7 +33,7 @@ function ProfileImage({ className = '' }: IProps) {
       </div>
       <figcaption class={style.caption}>
         <em>
-          Tech Lead <span>@groupon</span>
+          Lead Engineer <span>@groupon</span>
         </em>
         <p>Trying to build a better UI.</p>
         <p>Generally pleasant fellow..</p>

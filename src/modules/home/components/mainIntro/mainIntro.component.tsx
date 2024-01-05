@@ -17,14 +17,13 @@ function MainIntro() {
         <span class={style.callout}>&nbsp;</span>
         <em class={style.callout}>there</em>
         <p class={style.text}>
-          I'm Tech Lead for all things front-end at
+          I'm Lead Software Engineer for all things front-end at
           <i class={style.company} role="img">
             &nbsp;Groupon&nbsp;
           </i>
-          coupons
         </p>
         <p class={style.text}>
-          <em>Performance and technology advocate</em>
+          <em>Performance and technology advocate.</em>
         </p>
         <a
           href="https://www.linkedin.com/in/jameshill-dev"
